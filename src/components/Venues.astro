@@ -1,6 +1,7 @@
 ---
 import skylightMain from "../assets/images/venues/skylight/main.webp";
 import manhattanClubMain from "../assets/images/venues/manhattan-club/main.webp";
+import restaurantMain from "../assets/images/venues/restaurant/main.jpg";
 import skylightFloorplans from "../assets/documents/floorplan-skylight.pdf";
 import manhattanClubFloorplans from "../assets/documents/floorplan-manhattan-club.pdf";
 import Venue from "./Venue.astro";
@@ -13,7 +14,7 @@ const manhattanClubGallery = (
   await Astro.glob("../assets/images/venues/manhattan-club/*.jpg")
 ).map((image) => image.default);
 
-const venues = [
+const mmVenues = [
   {
     id: 1,
     name: "Skylight Room",
@@ -61,23 +62,64 @@ const venues = [
     `,
   },
 ];
+
+const restaurantVenues = [
+  {
+    id: 3,
+    name: "The Restaurant",
+    mainImage: restaurantMain,
+    floorPlans: skylightFloorplans,
+    video: "https://youtu.be/zVe3RrmbNjw",
+    gallery: skylightGallery,
+    description: `
+    <h4>${t("venues.size")}</h4>
+    <ul>
+      <li>3,408 ${t("venues.square-feet")}</li>
+    </ul>
+    <h4>${t("venues.capacity")}</h4>
+    <ul>
+      <li>275 ${t("venues.cocktail-reception")}</li>
+      <li>275 ${t("venues.seated-dinner")}</li>
+      <li>250 ${t("venues.seated-dinner-dance-floor")}</li>
+      <li>125 ${t("venues.classroom-conference")}</li>
+      <li>225 ${t("venues.theatre-seating")}</li>
+      <li>120 ${t("venues.u-shape-conference")}</li>
+    </ul>
+    `,
+  },
+];
 ---
 
 <section class="container" id="venues-section">
   <h2 data-aos="fade-up">{t("venues")}</h2>
   <p data-aos="fade-up">
+    <span class="d-block mb-3">Manhattan Manor</span>
     {t("venues.description")}
   </p>
 
   <div class="row venues">
     {
-      venues.map((venue) => (
+      mmVenues.map((venue) => (
         <div class="col-12 col-md-6 d-flex justify-content-center">
           <Venue {...venue} />
         </div>
       ))
     }
     <div class="col-12 col-md-6"></div>
+  </div>
+
+  <p data-aos="fade-up">
+    <span class="d-block mb-3">The Restaurant</span>
+    Join us at Rosie O'Grady's Steak & Seafood House starting at 9 pm for five hours
+    of Premium Open Bar, a Five Course Gourmet Dinner, and Music & Dancing!! Celebrate
+    all night with a fun crowd and just before midnight, step out onto our cordoned
+    off sidewalk and join in the Times Square Ball Drop Count Down.
+  </p>
+
+  <div class="row venues">
+    <div class="col-12 d-flex justify-content-center">
+      <Venue {...restaurantVenues[0]} />
+    </div>
   </div>
 </section>
 
@@ -95,5 +137,6 @@ const venues = [
 
   .venues {
     margin-top: 60px;
+    margin-bottom: 60px;
   }
 </style>

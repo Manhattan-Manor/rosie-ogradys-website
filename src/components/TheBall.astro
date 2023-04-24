@@ -1,0 +1,56 @@
+---
+import { Image } from "@astrojs/image/components";
+import enOne from "../assets/images/circles/en/the-ball/1-1mm.png";
+import esOne from "../assets/images/circles/es/the-ball/1-1mm.png";
+import enTwo from "../assets/images/circles/en/the-ball/1-2mm.png";
+import esTwo from "../assets/images/circles/es/the-ball/1-2mm.png";
+import enThree from "../assets/images/circles/en/the-ball/1-3mm.png";
+import esThree from "../assets/images/circles/es/the-ball/1-3mm.png";
+import enFour from "../assets/images/circles/en/the-ball/1-4mm.png";
+import esFour from "../assets/images/circles/es/the-ball/1-4mm.png";
+import i18next from "i18next";
+const lang = i18next.language;
+---
+
+<section class="container">
+  <h2 class="text-center mb-5" data-aos="fade-up">The Ball</h2>
+
+  <div class="row">
+    <div class="col-12 col-md-3 d-flex justify-content-center mt-4 mt-md-0">
+      <Image
+        src={lang === "en" ? enOne : esOne}
+        alt="12ft diameter ball"
+        data-aos="fade-up"
+        width={150}
+        height={150}
+      />
+    </div>
+    <div class="col-12 col-md-3 d-flex justify-content-center mt-4 mt-md-0">
+      <Image
+        src={lang === "en" ? enTwo : esTwo}
+        alt="12ft diameter ball"
+        data-aos="fade-up"
+        width={150}
+        height={150}
+      />
+    </div>
+    <div class="col-12 col-md-3 d-flex justify-content-center mt-4 mt-md-0">
+      <Image
+        src={lang === "en" ? enThree : esThree}
+        alt="12ft diameter ball"
+        data-aos="fade-up"
+        width={150}
+        height={150}
+      />
+    </div>
+    <div class="col-12 col-md-3 d-flex justify-content-center mt-4 mt-md-0">
+      <Image
+        src={lang === "en" ? enFour : esFour}
+        alt="12ft diameter ball"
+        data-aos="fade-up"
+        width={150}
+        height={150}
+      />
+    </div>
+  </div>
+</section>

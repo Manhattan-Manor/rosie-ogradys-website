@@ -21,12 +21,15 @@ import Clients from "../../components/Clients";
 import PreferredVendors from "../../components/PreferredVendors";
 import MediaPartners from "../../components/MediaPartners";
 import InTheNews from "../../components/InTheNews";
+import TheBall from "../../components/TheBall.astro";
 
 changeLanguage("es");
 ---
 
 <Layout>
   <VideoBanner />
+  <Countdown />
+  <TheBall />
   <WhoWeAre />
   <Venues />
   <Services />
@@ -42,7 +45,6 @@ changeLanguage("es");
   <MediaPartners client:idle />
   <InTheNews client:idle />
   <BallDrop />
-  <Countdown />
   <NewYearsEve />
   <ContactUs />
   <Footer />

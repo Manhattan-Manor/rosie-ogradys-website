@@ -75,7 +75,7 @@ const NewsItem: FC<INewsItemProps> = ({ item }) => {
           <div className="modal-content">
             <div className="modal-body">
               <span className="date">{dateString}</span>
-              <h2>{item.title}</h2>
+              <h1>{item.title}</h1>
               <p>{item.summary}</p>
 
               <hr />

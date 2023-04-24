@@ -26,9 +26,9 @@ const Testimonials: FC = () => {
 
   return (
     <section className="container" id="testimonials-section">
-      <h2 className="text-center mb-3">
+      <h1 className="text-center mb-3">
         {t("testimonials")}
-      </h2>
+      </h1>
 
       {isLoading && <div className="text-center">{t("common.loading")}</div>}
       <div className="row">

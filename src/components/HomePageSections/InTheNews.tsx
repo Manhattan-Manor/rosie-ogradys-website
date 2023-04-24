@@ -34,7 +34,7 @@ const InTheNews: FC = () => {
 
   return (
     <section className="container" id="clients-section">
-      <h2 className="text-center mb-3">{t("in-the-news")}</h2>
+      <h1 className="text-center mb-3">{t("in-the-news")}</h1>
 
       {isLoading && <div className="text-center">{t("common.loading")}</div>}
       <div className="row">

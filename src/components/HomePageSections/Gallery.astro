@@ -3,7 +3,7 @@ import { Picture } from "@astrojs/image/components";
 import { t } from "i18next";
 
 const images: string[] = (
-  await Astro.glob("../assets/images/gallery/*.{jpg,png}")
+  await Astro.glob("../../assets/images/gallery/*.{jpg,png}")
 ).map((i) => i.default);
 ---
 

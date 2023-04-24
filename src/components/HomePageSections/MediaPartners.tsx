@@ -1,8 +1,8 @@
 import React, { FC, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import Carousel from "./Carousel";
-import CarouselItem from "../classes/CarouselItem";
-import MediaPartner from "../classes/MediaPartner";
+import Carousel from "../Carousel";
+import CarouselItem from "../../classes/CarouselItem";
+import MediaPartner from "../../classes/MediaPartner";
 
 const MediaPartners: FC = () => {
   const [carouselItems, setCarouselItems] = useState<CarouselItem[]>([]);

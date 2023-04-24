@@ -1,0 +1,25 @@
+---
+import { Image } from "@astrojs/image/components";
+import theBallCircles from "../../data/theBallCircles";
+---
+
+<section class="container">
+  <h2 class="text-center mb-5" data-aos="fade-up">The Ball</h2>
+
+  <div class="row">
+    {
+      theBallCircles.map((circle, i) => {
+        const animationDelay = i * 200;
+        return (
+          <div
+            class="col-12 col-md-3 d-flex justify-content-center mt-4 mt-md-0"
+            data-aos="fade-up"
+            data-aos-delay={animationDelay}
+          >
+            <Image src={circle.img} alt={circle.alt} width={150} height={150} />
+          </div>
+        );
+      })
+    }
+  </div>
+</section>

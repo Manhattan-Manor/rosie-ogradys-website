@@ -1,7 +1,7 @@
 import React, { FC, useEffect, useState } from "react";
-import Testimonial from "../classes/Testimonial";
+import Testimonial from "../../classes/Testimonial";
 import { useTranslation } from "react-i18next";
-import "../assets/styles/Testimonials.scss";
+import "../../assets/styles/Testimonials.scss";
 
 const Testimonials: FC = () => {
   const [isLoading, setIsLoading] = useState(false);

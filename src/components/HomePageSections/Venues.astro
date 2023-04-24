@@ -1,17 +1,17 @@
 ---
-import skylightMain from "../assets/images/venues/skylight/main.webp";
-import manhattanClubMain from "../assets/images/venues/manhattan-club/main.webp";
-import restaurantMain from "../assets/images/venues/restaurant/main.jpg";
-import skylightFloorplans from "../assets/documents/floorplan-skylight.pdf";
-import manhattanClubFloorplans from "../assets/documents/floorplan-manhattan-club.pdf";
-import Venue from "./Venue.astro";
+import skylightMain from "../../assets/images/venues/skylight/main.webp";
+import manhattanClubMain from "../../assets/images/venues/manhattan-club/main.webp";
+import restaurantMain from "../../assets/images/venues/restaurant/main.jpg";
+import skylightFloorplans from "../../assets/documents/floorplan-skylight.pdf";
+import manhattanClubFloorplans from "../../assets/documents/floorplan-manhattan-club.pdf";
+import Venue from "../Venue.astro";
 import { t } from "i18next";
 
 const skylightGallery = (
-  await Astro.glob("../assets/images/venues/skylight/*.jpg")
+  await Astro.glob("../../assets/images/venues/skylight/*.jpg")
 ).map((image) => image.default);
 const manhattanClubGallery = (
-  await Astro.glob("../assets/images/venues/manhattan-club/*.jpg")
+  await Astro.glob("../../assets/images/venues/manhattan-club/*.jpg")
 ).map((image) => image.default);
 
 const mmVenues = [

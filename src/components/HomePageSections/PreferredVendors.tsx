@@ -1,8 +1,8 @@
 import React, { FC, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import Carousel from "./Carousel";
-import CarouselItem from "../classes/CarouselItem";
-import PreferredVendor from "../classes/PreferredVendor";
+import Carousel from "../Carousel";
+import CarouselItem from "../../classes/CarouselItem";
+import PreferredVendor from "../../classes/PreferredVendor";
 
 const PreferredVendors: FC = () => {
   const [carouselItems, setCarouselItems] = useState<CarouselItem[]>([]);

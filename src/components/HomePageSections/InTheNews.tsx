@@ -1,8 +1,8 @@
 import React, { FC, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import Carousel from "./Carousel";
-import CarouselItem from "../classes/CarouselItem";
-import InTheNewsItem from "../classes/InTheNewsItem";
+import Carousel from "../Carousel";
+import CarouselItem from "../../classes/CarouselItem";
+import InTheNewsItem from "../../classes/InTheNewsItem";
 
 const InTheNews: FC = () => {
   const [carouselItems, setCarouselItems] = useState<CarouselItem[]>([]);

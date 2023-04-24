@@ -1,27 +1,29 @@
 ---
 import { changeLanguage } from "i18next";
-import OurTeam from "../../components/OurTeam.astro";
-import Services from "../../components/Services.astro";
-import UpcomingEvents from "../../components/UpcomingEvents.astro";
-import Venues from "../../components/Venues.astro";
-import VideoBanner from "../../components/VideoBanner.astro";
-import WhoWeAre from "../../components/WhoWeAre.astro";
+import OurTeam from "../../components/HomePageSections/OurTeam.astro";
+import Services from "../../components/HomePageSections/Services.astro";
+import UpcomingEvents from "../../components/HomePageSections/UpcomingEvents.astro";
+import Venues from "../../components/HomePageSections/Venues.astro";
+import VideoBanner from "../../components/HomePageSections/VideoBanner.astro";
+import WhoWeAre from "../../components/HomePageSections/WhoWeAre.astro";
 import Layout from "../../layouts/Layout.astro";
 import Footer from "../../components/Footer.astro";
-import Gallery from "../../components/Gallery.astro";
-import FindUs from "../../components/FindUs.astro";
-import BallDrop from "../../components/BallDrop.astro";
-import Countdown from "../../components/Countdown.astro";
-import NewYearsEve from "../../components/NewYearsEve.astro";
-import News from "../../components/News";
-import ContactUs from "../../components/ContactUs.astro";
-import InstagramFeed from "../../components/InstagramFeed.astro";
-import Testimonials from "../../components/Testimonials";
-import Clients from "../../components/Clients";
-import PreferredVendors from "../../components/PreferredVendors";
-import MediaPartners from "../../components/MediaPartners";
-import InTheNews from "../../components/InTheNews";
-import TheBall from "../../components/TheBall.astro";
+import Gallery from "../../components/HomePageSections/Gallery.astro";
+import FindUs from "../../components/HomePageSections/FindUs.astro";
+import BallDrop from "../../components/HomePageSections/BallDrop.astro";
+import Countdown from "../../components/HomePageSections/Countdown.astro";
+import NewYearsEve from "../../components/HomePageSections/NewYearsEve.astro";
+import News from "../../components/HomePageSections/News";
+import ContactUs from "../../components/HomePageSections/ContactUs.astro";
+import InstagramFeed from "../../components/HomePageSections/InstagramFeed.astro";
+import Testimonials from "../../components/HomePageSections/Testimonials";
+import Clients from "../../components/HomePageSections/Clients";
+import PreferredVendors from "../../components/HomePageSections/PreferredVendors";
+import MediaPartners from "../../components/HomePageSections/MediaPartners";
+import InTheNews from "../../components/HomePageSections/InTheNews";
+import TheBall from "../../components/HomePageSections/TheBall.astro";
+import PeopleWatching from "../../components/HomePageSections/PeopleWatching.astro";
+import OurParty from "../../components/HomePageSections/OurParty.astro";
 
 changeLanguage("es");
 ---
@@ -30,6 +32,8 @@ changeLanguage("es");
   <VideoBanner />
   <Countdown />
   <TheBall />
+  <PeopleWatching />
+  <OurParty />
   <WhoWeAre />
   <Venues />
   <Services />

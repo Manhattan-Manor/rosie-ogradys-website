@@ -34,6 +34,11 @@ const nextDecember31DateFormattedCapitalized =
     <div class="col-12 d-flex justify-content-center" id="countdown">
       {t("common.loading")}
     </div>
+
+    <a
+      class="btn btn-primary mt-5 px-4 py-3 text-uppercase"
+      href="https://manhattanmanor.com/newyear">Buy NYE Tickets</a
+    >
   </section>
 </countdown-component>
 
@@ -141,7 +146,8 @@ const nextDecember31DateFormattedCapitalized =
         // If the count down is finished, write some text
         if (distance < 0) {
           clearInterval(x);
-          if (countdownElement) countdownElement.innerHTML = happyNewYearString || "";
+          if (countdownElement)
+            countdownElement.innerHTML = happyNewYearString || "";
         }
       }, 1000);
     }

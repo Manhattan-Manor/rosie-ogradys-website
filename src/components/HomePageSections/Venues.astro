@@ -68,7 +68,7 @@ const mmVenues = [
 const restaurantVenues = [
   {
     id: 3,
-    name: "The Restaurant",
+    name: t("the-restaurant") || "The Restaurant",
     mainImage: restaurantMain,
     floorPlans: skylightFloorplans,
     video: "https://youtu.be/zVe3RrmbNjw",
@@ -94,7 +94,7 @@ const restaurantVenues = [
 const rosieVenues = [
   {
     id: 4,
-    name: "The Pub",
+    name: t("the-pub") || "The Pub",
     mainImage: pubMain,
     floorPlans: skylightFloorplans,
     video: "https://www.youtube.com/embed/zVe3RrmbNjw",
@@ -117,7 +117,7 @@ const rosieVenues = [
   },
   {
     id: 5,
-    name: "Broadway room",
+    name: t("broadway-room") || "Broadway Room",
     mainImage: broadwayMain,
     floorPlans: manhattanClubFloorplans,
     video: "https://www.youtube.com/embed/zVe3RrmbNjw",
@@ -159,11 +159,8 @@ const rosieVenues = [
   </div>
 
   <p data-aos="fade-up">
-    <span class="d-block mb-3 fw-bold">The Restaurant</span>
-    Join us at Rosie O'Grady's Steak & Seafood House starting at 9 pm for five hours
-    of Premium Open Bar, a Five Course Gourmet Dinner, and Music & Dancing!! Celebrate
-    all night with a fun crowd and just before midnight, step out onto our cordoned
-    off sidewalk and join in the Times Square Ball Drop Count Down.
+    <span class="d-block mb-3 fw-bold">{t("the-restaurant")}</span>
+    {t("the-restaurant.description")}
   </p>
 
   <div class="row venues">
@@ -173,13 +170,8 @@ const rosieVenues = [
   </div>
 
   <p data-aos="fade-up">
-    <span class="d-block mb-3 fw-bold">Rosie Pub & Broadway Room</span>
-    Enjoy a casual evening before or after a theatrical show in Rosie's Pub located
-    on our lower level. We offer a lighter menu of appetizers, sandwiches, and traditional
-    favorites. Our enchanting Broadway Ballroom is private, complete with fireplace
-    and satellite bar, accommodating up to 70 guests for either a sit-down dinner
-    or cocktails. The space can be expanded by joining the adjacent Pub to accommodate
-    more than 90 guests.
+    <span class="d-block mb-3 fw-bold">{t("rosie-pub-broadway-room")}</span>
+    {t("rosie-pub-broadway-room.description")}
   </p>
 
   <div class="row venues">
@@ -192,9 +184,7 @@ const rosieVenues = [
     }
   </div>
 
-  <a href="#contact-us-section" class="d-block mt-5"
-    >Host a Private Event at Rosie O'Grady's or Manhattan Manor</a
-  >
+  <a href="#contact-us-section" class="d-block mt-5">{t("private-event")}</a>
 </section>
 
 <style lang="scss">

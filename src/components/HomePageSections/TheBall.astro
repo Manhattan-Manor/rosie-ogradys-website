@@ -1,10 +1,13 @@
 ---
 import { Image } from "@astrojs/image/components";
-import theBallCircles from "../../data/theBallCircles";
+import getCircles from "../../data/theBallCircles";
+import i18next, { t } from "i18next";
+
+const theBallCircles = getCircles(i18next.language);
 ---
 
 <section class="container">
-  <h1 class="text-center mb-5" data-aos="fade-up">The Ball</h1>
+  <h1 class="text-center mb-5" data-aos="fade-up">{t("common.the-ball")}</h1>
 
   <div class="row">
     {

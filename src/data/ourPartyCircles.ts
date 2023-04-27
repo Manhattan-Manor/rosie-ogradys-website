@@ -10,35 +10,34 @@ import esFive from "../assets/images/circles/es/our-party/3-5mm.png";
 import enFive from "../assets/images/circles/en/our-party/3-5mm.png";
 import esSix from "../assets/images/circles/es/our-party/3-6mm.png";
 import enSix from "../assets/images/circles/en/our-party/3-6mm.png";
-import i18next from "i18next";
 
-const lang = i18next.language;
+const getCircles = (locale: string) => {
+  return [
+    {
+      img: locale === "en" ? enOne : esOne,
+      alt: "5 hours premium bar",
+    },
+    {
+      img: locale === "en" ? enTwo : esTwo,
+      alt: "5 course gourmet dinner",
+    },
+    {
+      img: locale === "en" ? enThree : esThree,
+      alt: "DJ music & dancing after party",
+    },
+    {
+      img: locale === "en" ? enFour : esFour,
+      alt: "Amenities photo booth & more",
+    },
+    {
+      img: locale === "en" ? enFive : esFive,
+      alt: "Street live view of the ball drop",
+    },
+    {
+      img: locale === "en" ? enSix : esSix,
+      alt: "View of the street and crowds",
+    },
+  ];
+};
 
-const ourPartyCircles = [
-  {
-    img: lang === "en" ? enOne : esOne,
-    alt: "5 hours premium bar",
-  },
-  {
-    img: lang === "en" ? enTwo : esTwo,
-    alt: "5 course gourmet dinner",
-  },
-  {
-    img: lang === "en" ? enThree : esThree,
-    alt: "DJ music & dancing after party",
-  },
-  {
-    img: lang === "en" ? enFour : esFour,
-    alt: "Amenities photo booth & more",
-  },
-  {
-    img: lang === "en" ? enFive : esFive,
-    alt: "Street live view of the ball drop",
-  },
-  {
-    img: lang === "en" ? enSix : esSix,
-    alt: "View of the street and crowds",
-  },
-];
-
-export default ourPartyCircles;
+export default getCircles;

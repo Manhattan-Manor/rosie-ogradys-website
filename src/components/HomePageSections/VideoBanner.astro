@@ -32,11 +32,11 @@ import { Trans } from "astro-i18next/components";
   <a href="#who-we-are-section" class="bounce" aria-label="Scroll down">
     <i class="bi bi-chevron-down"></i>
   </a>
-  <p class="text-uppercase fs-3 fw-bold sold-out-msg">This event is sold out</p>
+  <p class="text-uppercase fs-3 fw-bold sold-out-msg">{t("common.event-sold-out")}</p>
   <button
     class="btn btn-primary"
     data-bs-toggle="modal"
-    data-bs-target="#waiting-list-modal">Join our waiting list</button
+    data-bs-target="#waiting-list-modal">{t("common.join-waiting-list")}</button
   >
 </div>
 

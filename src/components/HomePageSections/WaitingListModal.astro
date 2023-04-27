@@ -17,7 +17,7 @@ const recaptchaSiteKey = import.meta.env.PUBLIC_G_RECAPTCHA_SITE_KEY;
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title fs-5" id="waiting-list-modal-label">
-          Join our waiting list
+          {t("common.join-waiting-list")}
         </h1>
         <button
           type="button"
@@ -130,8 +130,8 @@ const recaptchaSiteKey = import.meta.env.PUBLIC_G_RECAPTCHA_SITE_KEY;
       Swal.fire({
         title: t("common.success") || "Success!",
         text:
-          t("contact-us.form.success-message") ||
-          "Your message has been sent. We will get back to you shortly. Thank you!",
+          t("waiting-list-form.successs-message") ||
+          "Thank you for joining our waiting list. We will contact you if tickets become available.",
         confirmButtonText: t("common.ok") || "OK",
         confirmButtonColor: "#d9b812",
       });

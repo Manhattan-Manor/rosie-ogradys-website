@@ -1,0 +1,10 @@
+---
+import InfoPages from "../layouts/InfoPages.astro";
+import { t, changeLanguage } from "i18next";
+
+changeLanguage("en");
+---
+
+<InfoPages title={t("faq-general-instructions")}>
+  <h1>{t("faq-general-instructions")}</h1>
+</InfoPages>

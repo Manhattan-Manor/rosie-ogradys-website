@@ -1,6 +1,6 @@
 ---
 import Navbar from "../components/Navbar.astro";
-import favicon from "../assets/images/favicon.png?url";
+import favicon from "../assets/images/favicon.png";
 import i18next from "i18next";
 import { HeadHrefLangs } from "astro-i18next/components";
 import logo from "../assets/images/logo.svg?url";
@@ -64,7 +64,7 @@ import GoogleAnalytics from "../components/GoogleAnalytics.astro";
       integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
       crossorigin="anonymous"
     />
-    <link rel="shortcut icon" href={favicon} type="image/x-icon" />
+    <link rel="shortcut icon" href={favicon.src} type="image/x-icon" />
     <GoogleAnalytics />
   </head>
   <body
@@ -96,5 +96,7 @@ import GoogleAnalytics from "../components/GoogleAnalytics.astro";
         wrapAround: true,
       });
     </script>
+    <!-- Custom global styles -->
+    <script src="../global.ts"></script>
   </body>
 </html>

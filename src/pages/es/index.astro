@@ -1,8 +1,6 @@
 ---
 import { changeLanguage } from "i18next";
 import OurTeam from "../../components/HomePageSections/OurTeam.astro";
-import Services from "../../components/HomePageSections/Services.astro";
-import UpcomingEvents from "../../components/HomePageSections/UpcomingEvents.astro";
 import Venues from "../../components/HomePageSections/Venues.astro";
 import VideoBanner from "../../components/HomePageSections/VideoBanner.astro";
 import WhoWeAre from "../../components/HomePageSections/WhoWeAre.astro";
@@ -17,8 +15,6 @@ import News from "../../components/HomePageSections/News";
 import ContactUs from "../../components/HomePageSections/ContactUs.astro";
 import InstagramFeed from "../../components/HomePageSections/InstagramFeed.astro";
 import Testimonials from "../../components/HomePageSections/Testimonials";
-import Clients from "../../components/HomePageSections/Clients";
-import PreferredVendors from "../../components/HomePageSections/PreferredVendors";
 import MediaPartners from "../../components/HomePageSections/MediaPartners";
 import InTheNews from "../../components/HomePageSections/InTheNews";
 import TheBall from "../../components/HomePageSections/TheBall.astro";
@@ -26,6 +22,7 @@ import PeopleWatching from "../../components/HomePageSections/PeopleWatching.ast
 import OurParty from "../../components/HomePageSections/OurParty.astro";
 import RestaurantMenus from "../../components/HomePageSections/RestaurantMenus.astro";
 import GiftCards from "../../components/HomePageSections/GiftCards.astro";
+import WaitingListModal from "../../components/HomePageSections/WaitingListModal.astro";
 
 changeLanguage("es");
 ---
@@ -40,20 +37,19 @@ changeLanguage("es");
   <GiftCards />
   <WhoWeAre />
   <Venues />
-  <Services />
   <OurTeam />
   <News client:only="react" />
-  <UpcomingEvents />
   <InstagramFeed />
   <Gallery />
   <Testimonials client:visible />
   <FindUs />
-  <Clients client:idle />
-  <PreferredVendors client:idle />
   <MediaPartners client:idle />
   <InTheNews client:idle />
   <BallDrop />
   <NewYearsEve />
   <ContactUs />
   <Footer />
+
+  <!-- Modals -->
+  <WaitingListModal />
 </Layout>

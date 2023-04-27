@@ -13,6 +13,7 @@ import linkedinIcon from "../assets/images/social/linkedin.webp";
 import { localizePath } from "astro-i18next";
 import { t } from "i18next";
 import { Image } from "@astrojs/image/components";
+import PaymentMethods from "./PaymentMethods.astro";
 
 const currentYear = new Date().getFullYear();
 const nextYear = currentYear + 1;
@@ -203,6 +204,9 @@ const nextYear = currentYear + 1;
         {t("common.copyright")} © {currentYear} Manhattan Manor. {
           t("common.all-rights-reserved")
         }.
+      </div>
+      <div class="mt-4">
+        <PaymentMethods />
       </div>
       <div class="col-12 d-flex justify-content-center">
         <p

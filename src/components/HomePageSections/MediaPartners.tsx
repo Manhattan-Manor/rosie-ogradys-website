@@ -33,7 +33,7 @@ const MediaPartners: FC = () => {
   }, []);
 
   return (
-    <section className="container" id="clients-section">
+    <section className="container" id="media-partners-section">
       <h1 className="text-center mb-3">{t("media-partners")}</h1>
 
       {isLoading && <div className="text-center">{t("common.loading")}</div>}

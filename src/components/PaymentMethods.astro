@@ -1,0 +1,16 @@
+---
+import { Image } from "@astrojs/image/components";
+
+const icons = (
+  await Astro.glob("../assets/images/payment-methods-icons/*.svg")
+).map((image) => image.default);
+---
+
+<div>
+  {
+    icons.map((icon) => {
+      const alt = icon.src.split("/").pop().split(".")[0];
+      return <Image alt={alt} src={icon} width={38} height={24} />;
+    })
+  }
+</div>

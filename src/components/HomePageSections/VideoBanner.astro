@@ -3,6 +3,7 @@ import bannerVideo from "../../assets/videos/banner-video.mp4";
 import logo from "../../assets/images/logo.svg";
 import { t } from "i18next";
 import { Image } from "@astrojs/image/components";
+import { Trans } from "astro-i18next/components";
 ---
 
 <div class="video-background">
@@ -19,13 +20,36 @@ import { Image } from "@astrojs/image/components";
     height={180}
     loading="eager"
   />
-  <h4>{t("common.slogan")}</h4>
+  <p class="slogan">
+    <Trans i18nKey="common.slogan">
+      New Year's Eve Party <br />
+      Street Live View of the Ball Drop <br />
+      Times Square <br />
+      New York City <br />
+      2024
+    </Trans>
+  </p>
   <a href="#who-we-are-section" class="bounce" aria-label="Scroll down">
     <i class="bi bi-chevron-down"></i>
   </a>
+  <p class="text-uppercase fs-3 fw-bold sold-out-msg">This event is sold out</p>
+  <button
+    class="btn btn-primary"
+    data-bs-toggle="modal"
+    data-bs-target="#waiting-list-modal">Join our waiting list</button
+  >
 </div>
 
 <style lang="scss">
+  .sold-out-msg {
+    color: red;
+  }
+  .slogan {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+
   .video-background {
     position: relative;
     width: 100%;

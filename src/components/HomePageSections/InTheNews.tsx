@@ -33,7 +33,7 @@ const InTheNews: FC = () => {
   }, []);
 
   return (
-    <section className="container" id="clients-section">
+    <section className="container" id="in-the-news-section">
       <h1 className="text-center mb-3">{t("in-the-news")}</h1>
 
       {isLoading && <div className="text-center">{t("common.loading")}</div>}

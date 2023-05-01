@@ -16,28 +16,22 @@ import { Trans } from "astro-i18next/components";
   <Image
     src={logo}
     alt="Manhattan Manor Logo"
-    width={114}
-    height={180}
+    width={167}
+    height={94}
     loading="eager"
   />
   <p class="slogan">
     <Trans i18nKey="common.slogan">
-      New Year's Eve Party <br />
-      Street Live View of the Ball Drop <br />
-      Times Square <br />
-      New York City <br />
-      2024
+      Legendary Steakhouse and Seafood Restaurant <br />
+      Famous in the Theater Zone <br />
+      Very close to Times Square <br />
+      Midtown favorite for over 40 years <br />
+      New York City
     </Trans>
   </p>
   <a href="#who-we-are-section" class="bounce" aria-label="Scroll down">
     <i class="bi bi-chevron-down"></i>
   </a>
-  <p class="text-uppercase fs-3 fw-bold sold-out-msg">{t("common.event-sold-out")}</p>
-  <button
-    class="btn btn-primary"
-    data-bs-toggle="modal"
-    data-bs-target="#waiting-list-modal">{t("common.join-waiting-list")}</button
-  >
 </div>
 
 <style lang="scss">
@@ -55,6 +49,7 @@ import { Trans } from "astro-i18next/components";
     width: 100%;
     overflow: hidden;
     height: 100vh;
+    background-color: black;
   }
 
   .video-background video {

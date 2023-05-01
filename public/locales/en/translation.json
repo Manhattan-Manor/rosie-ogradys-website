@@ -161,5 +161,12 @@
   "our-menus.wines": "Wines",
   "our-menus.wines.description": "Dos lugares perfectos para recibir invitados especiales para conferencias o reuniones importantes, así como una elegante gala para celebrar sus logros. Servicio completo de catering para satisfacer sus necesidades.",
   "our-menus.liquor": "Liquor",
-  "our-menus.liquor.description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus totam expedita nostrum! Magnam porro ad aliquam animi quidem vitae sapiente, molestiae in necessitatibus nam, rerum consequuntur, illo enim commodi mollitia dolorem aperiam! Commodi qui maxime soluta temporibus fugiat quibusdam incidunt dolorum saepe libero sit. Sed?"
+  "our-menus.liquor.description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus totam expedita nostrum! Magnam porro ad aliquam animi quidem vitae sapiente, molestiae in necessitatibus nam, rerum consequuntur, illo enim commodi mollitia dolorem aperiam! Commodi qui maxime soluta temporibus fugiat quibusdam incidunt dolorum saepe libero sit. Sed?",
+  "reservations": "Reservations",
+  "reservations.kitchen-hours": "Kitchen Hours",
+  "reservations.bar-hours": "Bar Hours",
+  "reservations.news-signup": "News Signup",
+  "reservations.sun-to-tue": "Sun - Tue",
+  "reservations.wed-to-sat": "Wed - Sat",
+  "reservations.mon-to-sun": "Mon - Sun"
 }

@@ -1,5 +1,11 @@
+---
+import i18next, { t } from "i18next";
+const language = i18next.language;
+const openTableLang = language === "es" ? "es-MX" : "en-US";
+---
+
 <section id="reservations-section" class="container text-center">
-  <h1>Reservations</h1>
+  <h1>{t("reservations")}</h1>
   <p>
     <strong>Rosie O' Grady's</strong><br />
     800 7th Avenue <br />
@@ -12,25 +18,29 @@
     Email: <a href="mailto:info@rosieogradys.com">info@rosieogradys.com</a>
   </p>
   <p>
-    <strong>Kitchen</strong><br />
-    Sun to Tue 11:30AM - 11PM <br />
-    Wed to Sat 11:30AM - 12AM
+    <strong>{t("reservations.kitchen-hours")}</strong><br />
+    {t("reservations.sun-to-tue")} 11:30AM - 11PM <br />
+    {t("reservations.wed-to-sat")} 11:30AM - 12AM
   </p>
   <p>
     <strong>Rosie O' Grady's</strong><br />
-    Mon to Sun 11:30AM - 2AM
+    {t("reservations.mon-to-sun")} 11:30AM - 2AM
   </p>
   <p>
-    <strong>Bar Hours</strong><br />
-    Mon to Sun 11:30AM - 2AM
+    <strong>{t("reservations.bar-hours")}</strong><br />
+    {t("reservations.mon-to-sun")} 11:30AM - 2AM
   </p>
 
   <!-- OpenTable Reservation frame -->
   <script
     is:inline
     type="text/javascript"
-    src="//www.opentable.com/widget/reservation/loader?rid=13744&type=standard&theme=standard&iframe=true&domain=com&lang=en-US&newtab=false&ot_source=Restaurant%20website"
+    src=`//www.opentable.com/widget/reservation/loader?rid=13744&type=standard&theme=standard&iframe=true&domain=com&lang=${openTableLang}&newtab=false&ot_source=Restaurant%20website`
   ></script>
 
-  <a href="#contact-us-section" class="btn btn-primary text-uppercase px-4 py-3 mt-4">News Signup</a>
+  <a
+    href="#contact-us-section"
+    class="btn btn-primary text-uppercase px-4 py-3 mt-4"
+    >{t("reservations.news-signup")}</a
+  >
 </section>

@@ -143,31 +143,6 @@ const rosieVenues = [
 
 <section class="container" id="venues-section">
   <h1 data-aos="fade-up">{t("venues")}</h1>
-  <p data-aos="fade-up">
-    <span class="d-block mb-3">Manhattan Manor</span>
-    {t("venues.description")}
-  </p>
-
-  <div class="row venues">
-    {
-      mmVenues.map((venue) => (
-        <div class="col-12 col-md-6 d-flex justify-content-center">
-          <Venue {...venue} />
-        </div>
-      ))
-    }
-  </div>
-
-  <p data-aos="fade-up">
-    <span class="d-block mb-3 fw-bold">{t("the-restaurant")}</span>
-    {t("the-restaurant.description")}
-  </p>
-
-  <div class="row venues">
-    <div class="col-12 d-flex justify-content-center">
-      <Venue {...restaurantVenues[0]} />
-    </div>
-  </div>
 
   <p data-aos="fade-up">
     <span class="d-block mb-3 fw-bold">{t("rosie-pub-broadway-room")}</span>
@@ -177,6 +152,21 @@ const rosieVenues = [
   <div class="row venues">
     {
       rosieVenues.map((venue) => (
+        <div class="col-12 col-md-6 d-flex justify-content-center">
+          <Venue {...venue} />
+        </div>
+      ))
+    }
+  </div>
+
+  <p data-aos="fade-up">
+    <span class="d-block mb-3 fw-bold">Manhattan Manor</span>
+    {t("venues.description")}
+  </p>
+
+  <div class="row venues">
+    {
+      mmVenues.map((venue) => (
         <div class="col-12 col-md-6 d-flex justify-content-center">
           <Venue {...venue} />
         </div>

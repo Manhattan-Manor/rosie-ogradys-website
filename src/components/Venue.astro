@@ -11,7 +11,7 @@ interface Props {
   floorPlans: string;
   description: string;
   video: string;
-  gallery: string[];
+  gallery: ImageMetadata[];
 }
 
 const { id, name, mainImage, floorPlans, description, video, gallery } =
@@ -98,7 +98,6 @@ const { id, name, mainImage, floorPlans, description, video, gallery } =
         <a
           id={`lightbox_${id}_${i}`}
           class="d-none"
-          // @ts-ignore
           href={g.src}
           data-lightbox={id}
         >
@@ -139,6 +138,7 @@ const { id, name, mainImage, floorPlans, description, video, gallery } =
 
         h5 {
           font-size: 2rem;
+          color: white;
         }
       }
     }
@@ -168,10 +168,10 @@ const { id, name, mainImage, floorPlans, description, video, gallery } =
 
       a,
       button {
-        background-color: black;
+        background-color: white;
         border: 1px solid $primary;
         border-radius: 0;
-        color: white;
+        color: black;
         cursor: pointer;
         font-size: 1rem;
         font-weight: 700;

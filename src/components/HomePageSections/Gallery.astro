@@ -2,7 +2,7 @@
 import { Picture } from "@astrojs/image/components";
 import { t } from "i18next";
 
-const images: string[] = (
+const images: ImageMetadata[] = (
   await Astro.glob("../../assets/images/gallery/*.{jpg,png}")
 ).map((i) => i.default);
 ---
@@ -22,7 +22,6 @@ const images: string[] = (
             data-aos="fade-up"
             data-aos-delay={animationDelay}
           >
-            {/* @ts-ignore */}
             <a href={image.src} data-lightbox="gallery">
               <Picture
                 class="w-100"

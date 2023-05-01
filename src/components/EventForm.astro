@@ -19,9 +19,8 @@ const recaptchaSiteKey = import.meta.env.PUBLIC_G_RECAPTCHA_SITE_KEY;
   class="modal fade"
   id="event-modal"
   tabindex="-1"
-  aria-labelledby="tellUsMoreAboutYourEventModal"
+  aria-label={t("contact-us.form.title")}
   aria-hidden="true"
-  data-bs-theme="dark"
 >
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
@@ -200,10 +199,7 @@ const recaptchaSiteKey = import.meta.env.PUBLIC_G_RECAPTCHA_SITE_KEY;
   }
 
   .modal-content {
-    background-color: #000;
-    color: #fff;
     border: 3px solid $primary;
-    border-radius: 0;
     box-shadow: 0 0 0 0;
   }
 

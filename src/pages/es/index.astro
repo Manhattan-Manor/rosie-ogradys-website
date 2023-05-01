@@ -17,13 +17,10 @@ import InstagramFeed from "../../components/HomePageSections/InstagramFeed.astro
 import Testimonials from "../../components/HomePageSections/Testimonials";
 import MediaPartners from "../../components/HomePageSections/MediaPartners";
 import InTheNews from "../../components/HomePageSections/InTheNews";
-import TheBall from "../../components/HomePageSections/TheBall.astro";
-import PeopleWatching from "../../components/HomePageSections/PeopleWatching.astro";
-import OurParty from "../../components/HomePageSections/OurParty.astro";
-import RestaurantMenus from "../../components/HomePageSections/RestaurantMenus.astro";
 import GiftCards from "../../components/HomePageSections/GiftCards.astro";
 import Reservations from "../../components/HomePageSections/Reservations.astro";
 import OurMenus from "../../components/HomePageSections/OurMenus.astro";
+import UpcomingEvents from "../../components/HomePageSections/UpcomingEvents.astro";
 
 changeLanguage("es");
 ---
@@ -34,14 +31,9 @@ changeLanguage("es");
   <WhoWeAre />
   <Venues />
   <OurMenus />
-  <Countdown />
-  <TheBall />
-  <PeopleWatching />
-  <OurParty />
-  <RestaurantMenus />
   <GiftCards />
   <OurTeam />
-  <News client:only="react" />
+  <UpcomingEvents />
   <InstagramFeed />
   <Gallery />
   <Testimonials client:visible />
@@ -49,6 +41,7 @@ changeLanguage("es");
   <MediaPartners client:idle />
   <InTheNews client:idle />
   <BallDrop />
+  <Countdown />
   <NewYearsEve />
   <ContactUs />
   <Footer />

@@ -2,7 +2,7 @@
 import logo from "../assets/images/logo.svg";
 import usaFlag from "../assets/images/flags/usa.png";
 import spaFlag from "../assets/images/flags/spa.png";
-import rosieLogo from "../assets/images/logo-rosie.png";
+import manhattanManorLogo from "../assets/images/logo-manhattan-manor.png";
 import mmSpecs from "../assets/documents/mm-specs.pdf";
 import facebookIcon from "../assets/images/social/facebook.png";
 import instagramIcon from "../assets/images/social/instagram.png";
@@ -23,9 +23,9 @@ const nextYear = currentYear + 1;
   <div class="container">
     <div class="row">
       <div class="col-12 col-md-4">
-        <a href="mailto:info@manhattanmanor.com" class="social-link">
+        <a href="mailto:info@rosieogradys.com" class="social-link">
           <i class="bi bi-envelope-fill"></i>
-          <span> info@manhattanmanor.com</span>
+          <span> info@rosieogradys.com</span>
         </a>
       </div>
       <div class="col-12 col-md-4">
@@ -37,7 +37,7 @@ const nextYear = currentYear + 1;
       <div class="col-12 col-md-4">
         <a href="#find-us-section" class="social-link">
           <i class="bi bi-pin-map-fill"></i>
-          <span> 201 West 52nd Street, New York, NY, 10019</span>
+          <span> 800 7th Ave at 52nd Street, New York, NY 10019</span>
         </a>
       </div>
       <div class="col-12 mt-4 text-center">
@@ -53,14 +53,14 @@ const nextYear = currentYear + 1;
 
         <Image
           src={logo}
-          alt="Manhattan Manor Logo"
+          alt="Rosie O' Grady's Logo"
           class="logo"
           width={80}
           height={126}
         />
 
         <div class="mt-4">
-          <a href="#">
+          <a href="/">
             <Image
               src={usaFlag}
               alt="English"
@@ -69,7 +69,7 @@ const nextYear = currentYear + 1;
               format="webp"
             />
           </a>
-          <a href="#">
+          <a href="/es">
             <Image
               src={spaFlag}
               alt="Spanish"
@@ -81,11 +81,11 @@ const nextYear = currentYear + 1;
         </div>
 
         <div class="mt-4">
-          <a href="https://rosieogradys.com/" rel="noopener noreferrer">
+          <a href="https://nye.manhattanmanor.com/" rel="noopener noreferrer">
             {t("footer.visit-our-sister-restaurant")}
 
             <Image
-              src={rosieLogo}
+              src={manhattanManorLogo}
               alt="Rosie O'Grady's"
               class="d-block mt-3 mx-auto"
               width={150}
@@ -99,7 +99,7 @@ const nextYear = currentYear + 1;
           href="https://www.eventbrite.com/e/new-years-eve-party-and-ball-drop-live-in-times-square-at-rosie-ogradys-tickets-296357482207"
           class="mt-4 d-block text-center text-dark"
         >
-          {t("common.celebrate-at")} Rosie O'Gradys <br />
+          {t("common.celebrate-at")} Manhattan Manor <br />
           {t("common.nye.party")}
           <br />
           {t("ball-drop.title")}
@@ -112,7 +112,7 @@ const nextYear = currentYear + 1;
     </div>
     <div class="row mt-4">
       <div class="col-12 col-md-4">
-        <a href={mmSpecs}>SKYLIGHT ROOM - {(t("specs") || "").toUpperCase()}</a>
+        <a class="text-uppercase" href={mmSpecs}>{t("the-pub")} - {(t("specs") || "")}</a>
       </div>
       <div class="col-12 col-md-4">
         <a href={localizePath("/terms")}
@@ -120,7 +120,7 @@ const nextYear = currentYear + 1;
         >
       </div>
       <div class="col-12 col-md-4">
-        <a href={mmSpecs}>MANHATTAN CLUB - {(t("specs") || "").toUpperCase()}</a
+        <a class="text-uppercase" href={mmSpecs}>{t("broadway-room")} - {(t("specs") || "")}</a
         >
       </div>
 
@@ -134,7 +134,7 @@ const nextYear = currentYear + 1;
         <a href={localizePath("/accessibility")}>{t("accessibility")}</a>
       </div>
       <div class="col-12 mt-4 social-icons">
-        <a href="https://www.facebook.com/manhattanmanor" target="_blank">
+        <a href="https://facebook.com/rosieogradyssteakhousenyc" target="_blank">
           <Image
             src={facebookIcon}
             alt="Facebook"
@@ -143,7 +143,7 @@ const nextYear = currentYear + 1;
             format="webp"
           />
         </a>
-        <a href="https://www.instagram.com/manhattanmanor/" target="_blank">
+        <a href="https://www.instagram.com/rosieogradysnewyork" target="_blank">
           <Image
             src={instagramIcon}
             alt="Instagram"
@@ -152,7 +152,7 @@ const nextYear = currentYear + 1;
             format="webp"
           />
         </a>
-        <a href="https://www.youtube.com/@manhattanmanor" target="_blank">
+        <a href="https://www.youtube.com/channel/UCewrnanHLZ5NI5w-0UF0iXQ" target="_blank">
           <Image
             src={youtubeIcon}
             alt="Youtube"
@@ -161,34 +161,8 @@ const nextYear = currentYear + 1;
             format="webp"
           />
         </a>
-      </div>
-      <div class="col-12 mt-3 social-icons">
         <a
-          href="https://www.zola.com/wedding-vendors/wedding-venues/manhattan-manor?utm_source=vendor&utm_medium=various&utm_content=badge"
-          target="_blank"
-        >
-          <Image
-            src={zolaIcon}
-            alt="Zola"
-            width={40}
-            height={40}
-            format="webp"
-          />
-        </a>
-        <a
-          href="https://www.theknot.com/marketplace/manhattan-club-nyc-new-york-ny-2012844"
-          target="_blank"
-        >
-          <Image
-            src={theknotIcon}
-            alt="TheKnot"
-            width={40}
-            height={40}
-            format="webp"
-          />
-        </a>
-        <a
-          href="https://www.linkedin.com/company/manhattan-manor-nyc/"
+          href="https://www.linkedin.com/company/rosie-ogradys/"
           target="_blank"
         >
           <Image
@@ -201,7 +175,7 @@ const nextYear = currentYear + 1;
         </a>
       </div>
       <div class="col-12 text-center mt-4">
-        {t("common.copyright")} © {currentYear} Manhattan Manor. {
+        {t("common.copyright")} © {currentYear} Rosie O' Grady's. {
           t("common.all-rights-reserved")
         }.
       </div>

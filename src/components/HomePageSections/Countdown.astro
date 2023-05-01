@@ -29,7 +29,7 @@ const nextDecember31DateFormattedCapitalized =
 >
   <section class="text-center" id="countdown-section">
     <h1>{t("countdown")}</h1>
-    <h3>{nextDecember31DateFormattedCapitalized}</h3>
+    <h2>{nextDecember31DateFormattedCapitalized}</h2>
 
     <div class="col-12 d-flex justify-content-center" id="countdown">
       {t("common.loading")}
@@ -37,7 +37,7 @@ const nextDecember31DateFormattedCapitalized =
 
     <a
       class="btn btn-primary mt-5 px-4 py-3 text-uppercase"
-      href="https://manhattanmanor.com/newyear">{t("common.buy-nye-tickets")}</a
+      href="https://rosieogradys.com/newyear">{t("common.buy-nye-tickets")}</a
     >
   </section>
 </countdown-component>
@@ -49,12 +49,12 @@ const nextDecember31DateFormattedCapitalized =
     margin-top: 30px;
     grid-template-columns: 2fr 1fr 2fr 1fr 2fr 1fr 2fr;
     font-size: 2.5rem;
-    color: white;
     width: 400px;
   }
 
   .countdown-elements div {
     text-align: center;
+    font-weight: bold;
   }
 
   .countdown-elements div:last-child {
@@ -62,12 +62,13 @@ const nextDecember31DateFormattedCapitalized =
   }
 
   .countdown-elements div:last-child span {
-    color: white;
+    color: black;
   }
 
   .countdown-elements div span {
     display: block;
     font-size: 18px;
+    font-weight: normal;
   }
 </style>
 

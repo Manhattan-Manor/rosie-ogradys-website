@@ -1,0 +1,84 @@
+---
+import BrunchImg from "../../assets/images/services/brunch.png";
+import ChildrenImg from "../../assets/images/services/children.jpg";
+import DinnerImg from "../../assets/images/services/dinner.jpg";
+import LiquorImg from "../../assets/images/services/liquor.png";
+import LunchImg from "../../assets/images/services/lunch.jpg";
+import PretheatreImg from "../../assets/images/services/pretheatre.png";
+import RestaurantWeekImg from "../../assets/images/services/restaurantweek.png";
+import WinesImg from "../../assets/images/services/wines.jpg";
+import { t } from "i18next";
+import Service from "../Service.astro";
+
+const services = [
+  {
+    title: t("our-menus.dinner"),
+    description: t("our-menus.dinner.description"),
+    image: DinnerImg,
+  },
+  {
+    title: t("our-menus.lunch"),
+    description: t("our-menus.lunch.description"),
+    image: LunchImg,
+  },
+  {
+    title: t("our-menus.children"),
+    description: t("our-menus.children.description"),
+    image: ChildrenImg,
+  },
+  {
+    title: t("our-menus.brunch"),
+    description: t("our-menus.brunch.description"),
+    image: BrunchImg,
+  },
+  {
+    title: t("our-menus.pre-theatre"),
+    description: t("our-menus.pre-theatre.description"),
+    image: PretheatreImg,
+  },
+  {
+    title: t("our-menus.restaurant-week"),
+    description: t("our-menus.restaurant-week.description"),
+    image: RestaurantWeekImg,
+  },
+  {
+    title: t("our-menus.wines"),
+    description: t("our-menus.wines.description"),
+    image: WinesImg,
+  },
+  {
+    title: t("our-menus.liquor"),
+    description: t("our-menus.liquor.description"),
+    image: LiquorImg,
+  },
+];
+---
+
+<section class="container-fluid" id="menus-section">
+  <h1 data-aos="fade-up" class="text-center fw-bold mb-4">
+    {t("our-menus")}
+  </h1>
+
+  <div class="row">
+    {
+      services.map((service, index) => {
+        const animationDelay = index * 100;
+        return (
+          <div
+            class="col-12 col-sm-6 col-lg-3 mb-3 px-2"
+            data-aos="fade-up"
+            data-aos-delay={animationDelay}
+          >
+            <Service {...service} />
+          </div>
+        );
+      })
+    }
+  </div>
+</section>
+
+<style>
+  .container-fluid {
+    padding: 0 30px !important;
+  }
+</style>

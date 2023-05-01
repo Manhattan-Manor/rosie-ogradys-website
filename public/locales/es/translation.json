@@ -143,5 +143,22 @@
   "the-pub": "El pub",
   "broadway-room": "Sala de Broadway",
   "private-event": "Organiza un evento privado en Rosie O'Grady's o Manhattan Manor",
-  "common.tickets": "Boletos"
+  "common.tickets": "Boletos",
+  "our-menus": "Our Menus",
+  "our-menus.dinner": "Dinner",
+  "our-menus.dinner.description": "Un lugar ideal para desayunos, almuerzos y cenas corporativas, conferencias de día completo, fiestas y galas. Manhattan Manor ofrece catering de servicio completo y esta ubicado en el centro de la ciudad con acceso a todas las vías de transporte público.",
+  "our-menus.lunch": "Lunch",
+  "our-menus.lunch.description": "Un lugar ideal para desayunos, almuerzos y cenas corporativas, conferencias de día completo, fiestas y galas. Manhattan Manor ofrece catering de servicio completo y esta ubicado en el centro de la ciudad con acceso a todas las vías de transporte público.",
+  "our-menus.children": "Children",
+  "our-menus.children.description": "Los eventos de lanzamiento de productos son esenciales para cualquier negocio. Nuestras salas ofrecen el telón de fondo perfecto a pocos pasos de todos los subterráneos y trenes principales. Nuestro personal está allí para ayudarle a lograr el propósito específico de crear conciencia y publicidad para su producto o marca.",
+  "our-menus.brunch": "Brunch",
+  "our-menus.brunch.description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus totam expedita nostrum! Magnam porro ad aliquam animi quidem vitae sapiente, molestiae in necessitatibus nam, rerum consequuntur, illo enim commodi mollitia dolorem aperiam! Commodi qui maxime soluta temporibus fugiat quibusdam incidunt dolorum saepe libero sit. Sed?",
+  "our-menus.pre-theatre": "Pre-Theatre",
+  "our-menus.pre-theatre.description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus totam expedita nostrum! Magnam porro ad aliquam animi quidem vitae sapiente, molestiae in necessitatibus nam, rerum consequuntur, illo enim commodi mollitia dolorem aperiam! Commodi qui maxime soluta temporibus fugiat quibusdam incidunt dolorum saepe libero sit. Sed?",
+  "our-menus.restaurant-week": "Restaurant Week",
+  "our-menus.restaurant-week.description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus totam expedita nostrum! Magnam porro ad aliquam animi quidem vitae sapiente, molestiae in necessitatibus nam, rerum consequuntur, illo enim commodi mollitia dolorem aperiam! Commodi qui maxime soluta temporibus fugiat quibusdam incidunt dolorum saepe libero sit. Sed?",
+  "our-menus.wines": "Wines",
+  "our-menus.wines.description": "Dos lugares perfectos para recibir invitados especiales para conferencias o reuniones importantes, así como una elegante gala para celebrar sus logros. Servicio completo de catering para satisfacer sus necesidades.",
+  "our-menus.liquor": "Liquor",
+  "our-menus.liquor.description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus totam expedita nostrum! Magnam porro ad aliquam animi quidem vitae sapiente, molestiae in necessitatibus nam, rerum consequuntur, illo enim commodi mollitia dolorem aperiam! Commodi qui maxime soluta temporibus fugiat quibusdam incidunt dolorum saepe libero sit. Sed?"
 }

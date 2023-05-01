@@ -30,6 +30,8 @@ const { title, description, image, textStyle } = Astro.props;
 </div>
 
 <style lang="scss">
+  @import "../assets/styles/_colors.scss";
+
   /* The container */
   .service-container {
     position: relative;
@@ -42,6 +44,8 @@ const { title, description, image, textStyle } = Astro.props;
     width: 100%;
     height: auto;
     position: relative;
+    border-radius: 47px;
+    border: 1px solid $primary;
   }
 
   .title {
@@ -68,6 +72,7 @@ const { title, description, image, textStyle } = Astro.props;
     height: 0;
     transition: 0.5s ease;
     overflow-y: auto;
+    border-radius: 47px;
   }
 
   /* When you mouse over the container, fade in the overlay title */
@@ -82,18 +87,5 @@ const { title, description, image, textStyle } = Astro.props;
     position: absolute;
     padding: 20px;
     top: 50px;
-  }
-
-  /* The container */
-  .service-container {
-    position: relative;
-    width: 100%;
-  }
-
-  /* The image */
-  .image {
-    display: block;
-    width: 100%;
-    height: auto;
   }
 </style>

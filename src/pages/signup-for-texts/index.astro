@@ -1,0 +1,210 @@
+---
+import { SEO } from "astro-seo";
+import logo from "../../assets/images/logo.svg?url";
+import logoCircle from "../../assets/images/logo-rosie.png";
+import martinis from "../../assets/images/martinis.webp";
+import GoogleAnalytics from "../../components/GoogleAnalytics.astro";
+import { Image } from "@astrojs/image/components";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "../../assets/styles/_colors.scss";
+
+const recaptchaSiteKey = import.meta.env.PUBLIC_G_RECAPTCHA_SITE_KEY;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="Cache-Control" content="max-age=604800" />
+
+        <SEO
+            title="Rosie O' Grady's Restaurant - Signup for texts"
+            description="Irish Pub NYC | Manhattan Pub Food | New York's Legendary Steak & Seafood Restaurant"
+            openGraph={{
+                basic: {
+                    title: "Rosie O' Grady's - Signup for texts",
+                    type: "website",
+                    image: logo,
+                },
+            }}
+            extend={{
+                // extending the default link tags
+                link: [{ rel: "icon", href: "/favicon.png" }],
+                // extending the default meta tags
+                meta: [
+                    {
+                        name: "twitter:image",
+                        content: logo,
+                    },
+                    { name: "twitter:title", content: "Rosie O' Grady's" },
+                    {
+                        name: "twitter:description",
+                        content:
+                            "Irish Pub NYC | Manhattan Pub Food | New York's Legendary Steak & Seafood Restaurant",
+                    },
+                ],
+            }}
+        />
+        <GoogleAnalytics />
+        <style lang="scss">
+            .smaller {
+                font-size: 0.8rem;
+            }
+
+            .btn-dark {
+                background-color: black;
+            }
+
+            .g-recaptcha {
+                display: flex;
+                justify-content: center;
+                margin-top: 1rem;
+            }
+        </style>
+    </head>
+    <body>
+        <main class="container">
+            <div class="row" style="height: 100vh;">
+                <div
+                    class="col-12 col-lg-6 d-none d-lg-flex align-items-center justify-content-center"
+                >
+                    <Image
+                        src={martinis}
+                        alt="Rosie O' Grady's"
+                        width={600}
+                        height={600}
+                    />
+                </div>
+                <div
+                    class="col-12 col-lg-6 text-center h-100 d-lg-flex align-items-center"
+                >
+                    <div>
+                        <Image
+                            src={logoCircle}
+                            alt="Rosie O' Grady's"
+                            width={150}
+                            height={150}
+                            format="webp"
+                        />
+                        <p>
+                            New York City Legendary <br />
+                            Steakhouse and Seafood Restaurant <br />
+                            in the Broadway Theatre District - Times Square <br
+                            />
+                            A Midtown favorite for over 40 years
+                        </p>
+                        <h1 class="text-primary fw-bold">Treat yourself</h1>
+                        <p>
+                            Join us for lunch - Dinner and get a free drink when
+                            you sign-up! <br />
+                            <span class="small">It is on us!</span>
+                        </p>
+                        <p class="smaller text-start">
+                            By submitting this form, you agree to receive
+                            recurring automated promotional and personalized
+                            marketing text messages from Rosie O'Grady's at the
+                            cell number used when you signing up. You must be
+                            over 21 years old. Reply HELP for help and STOP to
+                            cancel. Msg frequency varies. Msg & data rates may
+                            apply. View <a href="/terms" class="text-primary"
+                                >Terms & Privacy</a
+                            >.
+                        </p>
+                        <form id="signup-for-texts-form">
+                            <input
+                                class="form-control rounded-0 p-3"
+                                style="border: 1px solid black;"
+                                type="tel"
+                                placeholder="Mobile number"
+                                required
+                                id="mobile-number"
+                            />
+
+                            <div
+                                class="g-recaptcha"
+                                data-sitekey={recaptchaSiteKey}
+                            >
+                            </div>
+
+                            <button
+                                id="signup-for-texts-button"
+                                type="submit"
+                                class="btn btn-dark mt-3 rounded-0 w-100"
+                                ><strong>Get a Free Drink</strong>
+                                <br />when you sign-up for texts</button
+                            >
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <script is:inline async src="https://www.google.com/recaptcha/api.js"
+        ></script>
+        <script>
+            import Swal from "sweetalert2";
+
+            const form = document.getElementById(
+                "signup-for-texts-form"
+            ) as HTMLFormElement;
+            const mobileNumber = document.getElementById(
+                "mobile-number"
+            ) as HTMLInputElement;
+            const button = document.getElementById(
+                "signup-for-texts-button"
+            ) as HTMLButtonElement;
+
+            if (form && mobileNumber && button) {
+                form.addEventListener("submit", async (e) => {
+                    e.preventDefault();
+                    button.disabled = true;
+                    const recaptchaResponse = grecaptcha.getResponse(0);
+
+                    if (!recaptchaResponse) {
+                        Swal.fire({
+                            title: "Error!",
+                            text: "Please verify that you are not a robot.",
+                            icon: "error",
+                            confirmButtonText: "Ok",
+                        });
+                        return;
+                    }
+
+                    const response = await fetch(
+                        "https://cms.manhattanmanor.com/forms/src/signupForTexts.php",
+                        {
+                            method: "POST",
+                            body: JSON.stringify({
+                                phone: mobileNumber.value,
+                                g_captcha: recaptchaResponse,
+                            }),
+                        }
+                    );
+
+                    const data = await response.json();
+
+                    if (!data.error) {
+                        Swal.fire({
+                            title: "Success!",
+                            text: "You will receive a text message shortly.",
+                            icon: "success",
+                            confirmButtonText: "Ok",
+                        });
+                    } else {
+                        Swal.fire({
+                            title: "Error!",
+                            text: data.message,
+                            icon: "error",
+                            confirmButtonText: "Ok",
+                        });
+                    }
+                    form.reset();
+                    grecaptcha.reset();
+                    button.disabled = false;
+                });
+            }
+        </script>
+    </body>
+</html>

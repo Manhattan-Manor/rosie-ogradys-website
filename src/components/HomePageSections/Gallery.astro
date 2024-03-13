@@ -3,7 +3,7 @@ import { Picture } from "@astrojs/image/components";
 import { t } from "i18next";
 
 const images: ImageMetadata[] = (
-  await Astro.glob("../../assets/images/gallery/*.{jpg,png}")
+  await Astro.glob("../../assets/images/gallery/*.{jpg,png,jpeg}")
 ).map((i) => i.default);
 ---
 

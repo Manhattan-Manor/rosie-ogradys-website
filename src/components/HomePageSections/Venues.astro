@@ -2,8 +2,10 @@
 import skylightMain from "../../assets/images/venues/skylight/main.webp";
 import manhattanClubMain from "../../assets/images/venues/manhattan-club/main.webp";
 import restaurantMain from "../../assets/images/venues/restaurant/main.jpg";
-import pubMain from "../../assets/images/venues/the-pub/main.jpg";
-import broadwayMain from "../../assets/images/venues/broadway/main.jpg";
+import ManhattanMain from "../../assets/images/venues/manhattan-manor/manhattan-manor.jpg"
+import BroadWayRoom from "../../assets/images/venues/broadway-room/broadway-room.jpg"
+import TaftBar from "../../assets/images/venues/taft-bar/taft-bar.jpg"
+import PrivateDinningRoom from "../../assets/images/venues/private-dinning-room/private-dinning-room.jpg"
 import skylightFloorplans from "../../assets/documents/floorplan-skylight.pdf";
 import manhattanClubFloorplans from "../../assets/documents/floorplan-manhattan-club.pdf";
 import Venue from "../Venue.astro";
@@ -14,6 +16,19 @@ const skylightGallery = (
 ).map((image) => image.default);
 const manhattanClubGallery = (
   await Astro.glob("../../assets/images/venues/manhattan-club/*.jpg")
+).map((image) => image.default);
+
+const manhattanGallery = (
+  await Astro.glob("../../assets/images/venues/manhattan-manor/*.jpg")
+).map((image) => image.default);
+const broadWayRoomGallery = (
+  await Astro.glob("../../assets/images/venues/broadway-room/*.jpg")
+).map((image) => image.default);
+const taftBarGallery = (
+  await Astro.glob("../../assets/images/venues/taft-bar/*.jpg")
+).map((image) => image.default);
+const privateDinningRoomGallery = (
+  await Astro.glob("../../assets/images/venues/private-dinning-room/*.jpg")
 ).map((image) => image.default);
 
 const mmVenues = [
@@ -92,49 +107,80 @@ const restaurantVenues = [
 ];
 
 const rosieVenues = [
-  {
-    id: 4,
-    name: t("the-pub") || "The Pub",
-    mainImage: pubMain,
-    floorPlans: skylightFloorplans,
-    video: "https://www.youtube.com/embed/zVe3RrmbNjw",
-    gallery: skylightGallery,
+{
+    id: 1,
+    name: "Manhattan Manor",
+    mainImage: ManhattanMain,
+    gallery: manhattanGallery,
+    viewVirtualTour: "https://rosieogradys.com/private-event",
     description: `
     <h4>${t("venues.size")}</h4>
     <ul>
-      <li>3,408 ${t("venues.square-feet")}</li>
+      <li>2,520 ${t("venues.square-feet")} - 70 x 36 Feet</li>
     </ul>
     <h4>${t("venues.capacity")}</h4>
     <ul>
-      <li>275 ${t("venues.cocktail-reception")}</li>
-      <li>275 ${t("venues.seated-dinner")}</li>
-      <li>250 ${t("venues.seated-dinner-dance-floor")}</li>
-      <li>125 ${t("venues.classroom-conference")}</li>
-      <li>225 ${t("venues.theatre-seating")}</li>
-      <li>120 ${t("venues.u-shape-conference")}</li>
+      <li>150 ${t("venues.cocktail")}</li>
+      <li>130 ${t("venues.seated")}</li>
+      <li>110 ${t("venues.buffet")}</li>
+      <li>160 ${t("venues.theater")}</li>
+      <li>120 ${t("venues.theater-with-refreshments")}</li>
     </ul>
     `,
   },
   {
-    id: 5,
-    name: t("broadway-room") || "Broadway Room",
-    mainImage: broadwayMain,
-    floorPlans: manhattanClubFloorplans,
-    video: "https://www.youtube.com/embed/zVe3RrmbNjw",
-    gallery: manhattanClubGallery,
+    id: 2,
+    name: "Broadway Room",
+    mainImage: BroadWayRoom,
+    gallery: broadWayRoomGallery,
+    viewVirtualTour: "https://rosieogradys.com/private-event",
     description: `
     <h4>${t("venues.size")}</h4>
     <ul>
-      <li>3,520 ${t("venues.square-feet")}</li>
+      <li>950 ${t("venues.square-feet")} - 24 x 40 Feet</li>
     </ul>
     <h4>${t("venues.capacity")}</h4>
     <ul>
-      <li>280 ${t("venues.cocktail-reception")}</li>
-      <li>250 ${t("venues.seated-dinner")}</li>
-      <li>200 ${t("venues.seated-dinner-dance-floor")}</li>
-      <li>100 ${t("venues.classroom-conference")}</li>
-      <li>200 ${t("venues.theatre-seating")}</li>
-      <li>120 ${t("venues.u-shape-conference")}</li>
+      <li>100 ${t("venues.cocktail")}</li>
+      <li>80 ${t("venues.seated")}</li>
+      <li>70 ${t("venues.buffet")}</li>
+      <li>100 ${t("venues.theater")}</li>
+      <li>100 ${t("venues.theater-with-refreshments")}</li>
+    </ul>
+    `,
+  },
+  {
+    id: 3,
+    name: "Taft Bar",
+    mainImage: TaftBar,
+    gallery: taftBarGallery,
+    viewVirtualTour: "https://rosieogradys.com/private-event",
+    description: `
+    <h4>${t("venues.size")}</h4>
+    <ul>
+      <li>480 ${t("venues.square-feet")} - 24 x 20 Feet</li>
+    </ul>
+    <h4>${t("venues.capacity")}</h4>
+    <ul>
+      <li>40 ${t("venues.cocktail")}</li>
+    </ul>
+    `,
+  },
+  {
+    id: 4,
+    name: "Private Dinning Room",
+    mainImage: PrivateDinningRoom,
+    gallery: privateDinningRoomGallery,
+    viewVirtualTour: "https://rosieogradys.com/private-event",
+    description: `
+    <h4>${t("venues.size")}</h4>
+    <ul>
+      <li>288 ${t("venues.square-feet")} - 24 x 12 Feet</li>
+    </ul>
+    <h4>${t("venues.capacity")}</h4>
+    <ul>
+      <li>24 ${t("venues.long-table")}</li>
+      <li>45 ${t("venues.individual-table")}</li>
     </ul>
     `,
   },
@@ -152,7 +198,7 @@ const rosieVenues = [
   <div class="row venues">
     {
       rosieVenues.map((venue) => (
-        <div class="col-12 col-md-6 d-flex justify-content-center">
+        <div class="col-12 col-md-6 d-flex justify-content-center mb-5">
           <Venue {...venue} />
         </div>
       ))

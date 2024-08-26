@@ -8,13 +8,14 @@ interface Props {
   id: number;
   name: string;
   mainImage: ImageMetadata;
-  floorPlans: string;
+  floorPlans?: string;
   description: string;
-  video: string;
+  video?: string;
   gallery: ImageMetadata[];
+  viewVirtualTour?: string;
 }
 
-const { id, name, mainImage, floorPlans, description, video, gallery } =
+const { id, name, mainImage, floorPlans, description, video, gallery, viewVirtualTour } =
   Astro.props;
 // Name without spaces, accents, etc.
 ---
@@ -56,20 +57,33 @@ const { id, name, mainImage, floorPlans, description, video, gallery } =
       {t("common.gallery")}
     </button>
     <!-- Open the bootstrap video modal -->
-    <button
-      type="button"
-      data-bs-toggle="modal"
-      data-bs-target={`#videoModal__${id}`}
-      aria-label="Venue video"
-      class="btn"
-    >
-      <i class="bi bi-play-circle"></i>
-      {t("common.video")}
-    </button>
-    <a target="_blank" href={floorPlans} aria-label="Venue floor plans">
-      <i class="bi bi-map"></i>
-      {t("common.floor-plans")}
-    </a>
+    {
+      video &&
+        (<button
+          type="button"
+          data-bs-toggle="modal"
+          data-bs-target={`#videoModal__${id}`}
+          aria-label="Venue video"
+          class="btn"
+        >
+          <i class="bi bi-play-circle"></i>
+          {t("common.video")}
+        </button>)
+    }
+    {
+      floorPlans &&
+      (<a target="_blank" href={floorPlans} aria-label="Venue floor plans">
+        <i class="bi bi-map"></i>
+        {t("common.floor-plans")}
+      </a>)
+    }
+    {
+      viewVirtualTour && 
+      (<a target="_blank" href={viewVirtualTour} aria-label="Venue floor plans">
+        <i class="bi bi-badge-vr"></i>
+        {t("common.view-virtual-tour")}
+      </a>)
+    }
   </div>
 
   <!-- Bootstrap modal to show the embedded youtube video -->

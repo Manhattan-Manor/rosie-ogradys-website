@@ -49,7 +49,7 @@ import { Image } from "@astrojs/image/components";
         </button>
         <div class="sidenav__content collapse" id="sidenav">
           <div class="container">
-            <a href="#balldrop-section">{t("common.nye")}</a>
+            <a href="#balldrop-section">{t("common.nye.party")}</a>
             <a href="#countdown-section">{t("countdown")}</a>
             <a href="#menus-section">{t("party-menu-tickets")}</a>
             <a href="#gift-cards-section">{t("gift-cards")}</a>
@@ -231,7 +231,7 @@ import { Image } from "@astrojs/image/components";
     } else {
       // If we are on desktop, change SPA to ESPAÑOL and NYE to NEW YEAR'S EVE
       if (spaLink) spaLink.innerHTML = t("common.spanish") || "ESPAÑOL";
-      if (nyeLink) nyeLink.innerHTML = t("common.nye") || "NEW YEAR'S EVE";
+      if (nyeLink) nyeLink.innerHTML = t("common.nye.party") || "NEW YEAR'S EVE PARTY";
     }
   };
 

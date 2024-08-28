@@ -6,9 +6,10 @@ interface Props {
   description: string;
   image: ImageMetadata;
   textStyle?: string;
+  linkToPDF: String;
 }
 
-const { title, description, image, textStyle } = Astro.props;
+const { title, description, image, textStyle, linkToPDF } = Astro.props;
 ---
 
 <!-- An image that, on hover, shows a description with white text and black background, and a small text in front of the image to show what is the description about before hovering -->
@@ -25,7 +26,15 @@ const { title, description, image, textStyle } = Astro.props;
   />
   <h5 class="title">{title} <i class="bi bi-chevron-right"></i></h5>
   <div class="overlay">
-    <div class="text" set:html={description} style={textStyle} />
+
+    <div class="text-container">
+      <div class="text" set:html={description} style={textStyle} />
+      
+      <div class="button-group">
+        <a href="#" class="btn btn-text-primary btn-menu-on-site">Menu on site</a>
+        <a href=`${linkToPDF}` target="_blank" class="btn btn-text-primary btn-menu-on-pdf">Menu on PDF</a>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -36,6 +45,8 @@ const { title, description, image, textStyle } = Astro.props;
   .service-container {
     position: relative;
     width: 100%;
+    display: flex;
+    flex-direction: column;
   }
 
   /* The image */
@@ -73,6 +84,7 @@ const { title, description, image, textStyle } = Astro.props;
     transition: 0.5s ease;
     overflow-y: auto;
     border-radius: 47px;
+    flex: 1;
   }
 
   /* When you mouse over the container, fade in the overlay title */
@@ -84,8 +96,30 @@ const { title, description, image, textStyle } = Astro.props;
   .text {
     color: white;
     font-size: 1rem;
-    position: absolute;
+    // position: absolute;
     padding: 20px;
     top: 50px;
+  }
+
+  .text-container {
+    flex: 1;
+  }
+
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .btn-menu-on-site {
+    color: $primary;
+    margin-left: 20px;
+  }
+
+  .btn-menu-on-pdf{
+    color: red;
+    margin-right: 20px;
   }
 </style>

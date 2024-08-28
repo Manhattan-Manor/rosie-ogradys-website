@@ -69,7 +69,7 @@ const NewsItem: FC<INewsItemProps> = ({ item }) => {
         aria-labelledby={item.title}
         aria-hidden="true"
         ref={modalRef}
-        data-bs-theme="dark"
+        data-bs-theme="light"
       >
         <div className="modal-dialog modal-xl">
           <div className="modal-content">

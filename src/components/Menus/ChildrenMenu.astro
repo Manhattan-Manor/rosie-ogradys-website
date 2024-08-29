@@ -1,0 +1,163 @@
+---
+import RestaurantMenu from "../../classes/RestaurantMenu";
+
+interface Props {
+  menu: RestaurantMenu;
+}
+
+const { menu } = Astro.props;
+---
+
+<div class="restaurant-menu-group">
+  <h2>{menu.name}</h2>
+
+  <div class="row justify-content-center">
+    <div class="col-md-4">
+        {
+            menu.categories?.map((category) => (
+              <div>
+                <h3 >{category.name}</h3>
+                <hr />
+                <ul>
+                  {category.subCategory?.map((subCat) => (
+                    <li>
+                        <p class="dish-categories text-start d-flex justify-content-between align-items-center">
+                            {subCat.name}
+                            { subCat.price && <span class="dish-categories me-3">{subCat.price}</span>}
+                        </p>
+                        {
+                            subCat.dishes &&
+                            subCat.dishes?.map((dish) => (
+                                <ol>
+                                    <li>
+                                        <p class="dish">{dish.name}</p>
+                                    </li>
+                                </ol>
+                            ))
+                        }
+                      {
+                        subCat.subCategory?.map((ssub) => (
+                                <ol>
+                                    <p class="dish-categories text-start d-flex justify-content-between align-items-center">
+                                    {ssub.name}
+                                    <span class="dish-categories me-3">$749</span>
+                                </p>
+                                    {
+                                        ssub.dishes?.map((dish) => (
+                                            <li>
+                                                <p class="dish">{dish.name}</p>
+                                            </li>
+                                        ))
+                                    }
+                                </ol>
+                        )) 
+                      }
+                    </li>
+                  ))}
+                </ul>
+                <br />
+              </div>
+            ))
+          }
+  </div>
+  </div>
+</div>
+
+<style lang="scss">
+  @import "../../assets/styles/_colors.scss";
+
+  .restaurant-menu-group {
+    padding: 15px;
+    background-color: black;
+
+    .sub-categories{
+      font-size: 1.25rem;
+      color: white;
+      font-weight: bold;
+    }
+
+    .btn{
+        color: white;
+    }
+
+    .dish-categories{
+      font-size: 1rem;
+      color: $primary;
+      font-weight: bold;
+    }
+
+    .dish{
+      font-size: 1rem;
+      color: white;
+      font-weight: 300;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      text-align: center;
+    }
+
+    h3 {
+      font-size: 1.75rem;
+      margin-top: 20px;
+    }
+
+    h2,
+    h3 {
+      color: white;
+      font-weight: bold;
+    }
+
+    hr {
+      margin-left: 0;
+      border-color: $primary;
+      opacity: 1;
+
+      // If lg screen, max-width is 450
+      @media (min-width: 992px) {
+        max-width: 700px;
+      }
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        margin-top: 15px;
+
+        span {
+          display: block;
+          color: white;
+
+          &:first-child {
+            font-size: 18px;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+
+    ol {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        margin-top: 15px;
+
+        span {
+          display: block;
+          color: white;
+          font-size: 10px;
+
+          &:first-child {
+            font-size: 16px;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+</style>

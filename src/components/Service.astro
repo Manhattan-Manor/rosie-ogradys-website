@@ -7,9 +7,10 @@ interface Props {
   image: ImageMetadata;
   textStyle?: string;
   linkToPDF: String;
+  linkToMenu: string;
 }
 
-const { title, description, image, textStyle, linkToPDF } = Astro.props;
+const { title, description, image, textStyle, linkToPDF, linkToMenu } = Astro.props;
 ---
 
 <!-- An image that, on hover, shows a description with white text and black background, and a small text in front of the image to show what is the description about before hovering -->
@@ -31,7 +32,7 @@ const { title, description, image, textStyle, linkToPDF } = Astro.props;
       <div class="text" set:html={description} style={textStyle} />
       
       <div class="button-group">
-        <a href="#" class="btn btn-text-primary btn-menu-on-site">Menu on site</a>
+        <a href=`${linkToMenu}` target="_blank" class="btn btn-text-primary btn-menu-on-site">Menu on site</a>
         <a href=`${linkToPDF}` target="_blank" class="btn btn-text-primary btn-menu-on-pdf">Menu on PDF</a>
       </div>
     </div>

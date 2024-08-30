@@ -9,72 +9,52 @@ const barMenu: RestaurantMenu = {
           {
             name: "Caesar Salad",
             price: 16.95,
-            dishes: [
-              { name: "Traditional Dressing, Shaved Parmesan, Garlic Croutons on Crisp Romaine" }
-            ]
+            description: "Traditional Dressing, Shaved Parmesan, Garlic Croutons on Crisp Romaine"
           },
           {
             name: "French Onion Soup Au Gratin",
             price: 14.95,
-            dishes: [
-              { name: "With croutons, Topped with Melted Swiss and Mozzarella" }
-            ]
+            description: "With croutons, Topped with Melted Swiss and Mozzarella"
           },
           {
             name: "Blue Point Oysters",
             price: 20.95,
-            dishes: [
-              { name: "Half Dozen Nestled on a Bed of Crushed Ice" }
-            ]
+            description: "Half Dozen Nestled on a Bed of Crushed Ice"
           },
           {
             name: "Jumbo Gulf Shrimp Cocktail",
             price: 19.95,
-            dishes: [
-              { name: "Four Pieces, Horseradish - Chili Sauce" }
-            ]
+            description: "Four Pieces, Horseradish - Chili Sauce"
           },
           {
             name: "Fried Calamari",
             price: 18.95,
-            dishes: [
-              { name: "Served with Spicy Tomato Sauce" }
-            ]
+            description: "Served with Spicy Tomato Sauce"
           },
           {
             name: "Buffalo Wings",
             price: 17.95,
-            dishes: [
-              { name: "Served with Blue Cheese, Celery and Carrots" }
-            ]
+            description: "Served with Blue Cheese, Celery and Carrots"
           },
           {
             name: "Chicken Tenders",
             price: 15.95,
-            dishes: [
-              { name: "Served with Honey Mustard Sauce" }
-            ]
+            description: "Served with Honey Mustard Sauce" 
           },
           {
             name: "Mozzarella Sticks",
             price: 15.95,
-            dishes: [
-              { name: "Served with Marinara Sauce" }
-            ]
+            description: "Served with Marinara Sauce"
           },
           {
             name: "Three Cheese Nachos With Chili",
             price: 18.95,
-            dishes: [
-              { name: "With Avocado, Pico de Gallo, Sour Cream, Jalapenos" }
-            ]
+            description: "With Avocado, Pico de Gallo, Sour Cream, Jalapenos"
           },
           {
             name: "Roasted Golden Beet Salad",
             price: 17.95,
-            dishes: [
-              { name: "Arugula, Pistachios, Julienne Carrots and Goat Cheese Raspberry Vinaigrette" }
-            ]
+            description: "Arugula, Pistachios, Julienne Carrots and Goat Cheese Raspberry Vinaigrette"
           }
         ]
       },
@@ -84,70 +64,52 @@ const barMenu: RestaurantMenu = {
           {
             name: "Rosie’s Beef Burger",
             price: 22.95,
-            dishes: [
-              { name: "Lettuce, tomato, and Dill Pickle, French Fries or Sweet Potato Fries" }
-            ]
+            description: "Lettuce, tomato, and Dill Pickle, French Fries or Sweet Potato Fries"
           },
           {
             name: "California Burger",
             price: 23.95,
-            dishes: [
-              { name: "Lettuce, Tomato and Onion Topped w/Melted Pepper Jack and Sliced Avocado" }
-            ]
+            description: "Lettuce, Tomato and Onion Topped w/Melted Pepper Jack and Sliced Avocado"
           },
           {
             name: "Turkey Burger Classic",
             price: 23.95,
-            dishes: [
-              { name: "Sautéed Mushrooms and Onions, Topped w/Melted Mozzarella" }
-            ]
+            description: "Sautéed Mushrooms and Onions, Topped w/Melted Mozzarella"
           },
           {
             name: "Rosie’s Beyond Burger",
             price: 23.95,
-            dishes: [
-              { name: "Plant-Based, Served with Sautéed Mushrooms and Onions & Sweet Potato Fries" }
-            ]
+            description: "Plant-Based, Served with Sautéed Mushrooms and Onions & Sweet Potato Fries"
           }
         ]
       },
       {
         name: "SANDWICHES",
-        price: 0,
         description: "All Sandwiches are served with French Fries",
         subCategory: [
           {
             name: "Grilled Steak",
             price: 28.95,
-            dishes: [
-              { name: "Sliced NY Strip Steak served on Ciabatta, Pepper Jack Cheese and Onion Rings" }
-            ]
+            description: "Sliced NY Strip Steak served on Ciabatta, Pepper Jack Cheese and Onion Rings"
           },
           {
             name: "California Grilled Chicken",
             price: 23.95,
-            dishes: []
           },
           {
             name: "House Roasted Turkey Club",
             price: 20.95,
-            dishes: [
-              { name: "Double Decker/Lettuce, Tomato & Bacon" }
-            ]
+            description: "Double Decker/Lettuce, Tomato & Bacon"
           },
           {
             name: "Maryland Crabcake Brioche-Wich",
             price: 28.95,
-            dishes: [
-              { name: "Our Famous Crab Cake Sandwich Served with Tri-Color Slaw, Roasted Garlic Aioli" }
-            ]
+            description: "Our Famous Crab Cake Sandwich Served with Tri-Color Slaw, Roasted Garlic Aioli"
           },
           {
             name: "California Grilled Chicken",
             price: 23.95,
-            dishes: [
-              { name: "Served on Ciabatta w/Lettuce, Tomato and Onion Topped w/Melted Pepper Jack and Sliced Avocado Our Spicy Chipotle Sauce on the side" }
-            ]
+            description: "Served on Ciabatta w/Lettuce, Tomato and Onion Topped w/Melted Pepper Jack and Sliced Avocado Our Spicy Chipotle Sauce on the side"
           }
         ]
       },
@@ -157,16 +119,12 @@ const barMenu: RestaurantMenu = {
           {
             name: "Angus Mini Cheeseburgers",
             price: 16.95,
-            dishes: [
-              { name: "Cheddar Cheese and Barbecue Sauce" }
-            ]
+            description: "Cheddar Cheese and Barbecue Sauce"
           },
           {
             name: "Chipotle Grilled Chicken",
             price: 17.95,
-            dishes: [
-              { name: "Pepper Jack Cheese, Chipotle Mayonnaise & Avocado" }
-            ]
+            description: "Pepper Jack Cheese, Chipotle Mayonnaise & Avocado"
           }
         ]
       },
@@ -191,44 +149,32 @@ const barMenu: RestaurantMenu = {
           {
             name: "Petit Filet Mignon 8 Oz.",
             price: 48.95,
-            dishes: [
-              { name: "Choice Of Potato" }
-            ]
+            description: "Choice Of Potato"
           },
           {
             name: "New York Cut Sirloin Steak 14 Oz.",
             price: 49.95,
-            dishes: [
-              { name: "Choice Of Potato" }
-            ]
+            description: "Choice Of Potato"
           },
           {
             name: "Chicken Parmigiana",
             price: 28.95,
-            dishes: [
-              { name: "Served Over Linguine" }
-            ]
+            description: "Served Over Linguine"
           },
           {
             name: "Broiled Norwegian Salmon",
             price: 31.95,
-            dishes: [
-              { name: "Beurre Blanc, Asparagus, and Mashed Potatoes" }
-            ]
+            description: "Beurre Blanc, Asparagus, and Mashed Potatoes"
           },
           {
             name: "Traditional Fried New England Cod",
             price: 27.95,
-            dishes: [
-              { name: "French Fries and Tartar Sauce" }
-            ]
+            description: "French Fries and Tartar Sauce"
           },
           {
             name: "Shepherd’s Pie",
             price: 27.95,
-            dishes: [
-              { name: "Braised Ground Beef and Veal with Vegetables. Crowned with Mashed Potatoes" }
-            ]
+            description: "Braised Ground Beef and Veal with Vegetables. Crowned with Mashed Potatoes"
           }
         ]
       },
@@ -244,6 +190,16 @@ const barMenu: RestaurantMenu = {
           { name: "Chocolate Raspberry Cake" },
           { name: "Lemon Sorbet" },
           { name: "Homemade Ny Cheesecake" }
+        ]
+      },
+      {
+        name:"",
+        subCategory: [
+          { name: "Please Ask Your Server About Our Daily Menu Specials Please Let Your Server Know If You Have"},
+          { name: "A Food Allergy Or Dietary Concern, We Will Try Our Best To Accommodate Your Special Request"},
+          { name: "* Gluten Free Menu Items Pastas May Be Substituted With Gluten Free Linguini"},
+          { name: "* Prices Include 2.8% Credit Card Merchant Fee, Price Adjusted For Cash And Debit Card Payments."},
+
         ]
       }
     ]

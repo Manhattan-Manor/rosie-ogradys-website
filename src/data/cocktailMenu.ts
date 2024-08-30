@@ -194,13 +194,12 @@ const cocktailMenu: RestaurantMenu = {
         },
       ],
     },
-    
     {
         name: "BEER",
         subCategory: [
           {
             name: "DRAUGHT",
-            subCategory: [
+            dishes: [
               { name: "Guiness" },
               { name: "Stella Artois" },
               { name: "Blue Point" },
@@ -218,7 +217,7 @@ const cocktailMenu: RestaurantMenu = {
           },
           {
             name: "BOTTLES",
-            subCategory: [
+            dishes: [
               { name: "Bud Light" },
               { name: "Budweiser" },
               { name: "Heineken" },
@@ -231,7 +230,7 @@ const cocktailMenu: RestaurantMenu = {
           },
           {
             name: "CANS",
-            subCategory: [
+            dishes: [
               { name: "Strongbow" },
               { name: "Athletic N.A." },
               { name: "White Claw -" },
@@ -244,7 +243,7 @@ const cocktailMenu: RestaurantMenu = {
     {
         name: "SIDE ORDERS - ALL",
         price: 13.50,
-        subCategory: [
+        dishes: [
           { name: "Steamed Asparagus" },
           { name: "Sweet Potato Fries" },
           { name: "Creamed Spinach" },

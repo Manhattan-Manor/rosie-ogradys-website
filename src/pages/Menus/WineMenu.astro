@@ -1,26 +1,30 @@
 ---
-import RestaurantMenu from "../../classes/RestaurantMenu";
+import wineMenu from "../../data/wineMenu";
 
-interface Props {
-  menu: RestaurantMenu;
-}
-
-const { menu } = Astro.props;
+const menu = wineMenu;
 ---
+<head>
+  <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+</head>
 
 <div class="restaurant-menu-group">
   <h2>{menu.name}</h2>
 
   <div class="row justify-content-center">
     <div class="col-md-4">
-        {
-            menu.categories?.map((category) => (
-              <div>
-                <h3 >{category.name}</h3>
-                <hr />
-                <ul>
-                  {category.subCategory?.map((subCat) => (
-                    <li>
+    {
+      menu.categories?.slice(0, 2).map((category) => (
+        <div>
+          <h3 >{category.name}</h3>
+          <hr />
+          <ul>
+            {category.subCategory?.map((subCat) => (
+              <li>
                         <p class="dish-categories text-start d-flex justify-content-between align-items-center">
                             {subCat.name}
                             { subCat.price && <span class="dish-categories me-3">{subCat.price}</span>}
@@ -40,7 +44,7 @@ const { menu } = Astro.props;
                                 <ol>
                                     <p class="dish-categories text-start d-flex justify-content-between align-items-center">
                                     {ssub.name}
-                                    <span class="dish-categories me-3">$749</span>
+                                    { subCat.price && <span class="dish-categories me-3">{subCat.price}</span>}
                                 </p>
                                     {
                                         ssub.dishes?.map((dish) => (
@@ -53,19 +57,70 @@ const { menu } = Astro.props;
                         )) 
                       }
                     </li>
-                  ))}
-                </ul>
-                <br />
-              </div>
-            ))
-          }
+            ))}
+          </ul>
+          <br />
+        </div>
+      ))
+    }
   </div>
+  <div class="row  col-md-4">
+    {
+      menu.categories?.slice(2, 3).map((category) => (
+        <div class="container">
+          <h3 >{category.name}</h3>
+          <hr />
+          <ul>
+            {category.subCategory?.map((subCat) => (
+              <li>
+                        <p class="dish-categories text-start d-flex justify-content-between align-items-center">
+                            {subCat.name}
+                            { subCat.price && <span class="dish-categories me-3">{subCat.price}</span>}
+                        </p>
+                        {
+                            subCat.dishes &&
+                            subCat.dishes?.map((dish) => (
+                                <ol>
+                                    <li>
+                                        <p class="dish">{dish.name}</p>
+                                    </li>
+                                </ol>
+                            ))
+                        }
+                      {
+                        subCat.subCategory?.map((ssub) => (
+                                <ol>
+                                    <p class="dish-categories text-start d-flex justify-content-between align-items-center">
+                                    {ssub.name}
+                                    { subCat.price && <span class="dish-categories me-3">{subCat.price}</span>}
+                                </p>
+                                    {
+                                        ssub.dishes?.map((dish) => (
+                                            <li>
+                                                <p class="dish">{dish.name}</p>
+                                            </li>
+                                        ))
+                                    }
+                                </ol>
+                        )) 
+                      }
+                    </li>
+            ))}
+          </ul>
+          <br />
+        </div>
+      ))
+    }
   </div>
 </div>
 
 <style lang="scss">
   @import "../../assets/styles/_colors.scss";
 
+  body{
+    background-color: black;
+  }
+  
   .restaurant-menu-group {
     padding: 15px;
     background-color: black;

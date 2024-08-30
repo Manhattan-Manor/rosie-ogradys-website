@@ -9,65 +9,47 @@ const dinnerMenu: RestaurantMenu = {
           {
             name: "Rosie’s Caesar Salad",
             price: 16.95,
-            dishes: [
-              { name: "Romaine Lettuce, Traditional Dressing Shaved Parmesan and Garlic Croutons" }
-            ]
+            description: "Romaine Lettuce, Traditional Dressing Shaved Parmesan and Garlic Croutons"
           },
           {
             name: "Seasonal Garden Greens",
             price: 13.95,
-            dishes: [
-              { name: "Mesclun Greens and Tomato Choice of Homemade Dressing" }
-            ]
+            description: "Mesclun Greens and Tomato Choice of Homemade Dressing"
           },
           {
             name: "Roasted Golden Beet Salad",
             price: 17.95,
-            dishes: [
-              { name: "Arugula, Pistachios, Julienne Carrots and Goat Cheese Raspberry Vinaigrette" }
-            ]
+            description: "Arugula, Pistachios, Julienne Carrots and Goat Cheese Raspberry Vinaigrette"
           },
           {
             name: "Soup Of The Day",
             price: 11.95,
-            dishes: [
-              { name: "Made Fresh Daily. Ask Server" }
-            ]
+            description: "Made Fresh Daily. Ask Server"
           },
           {
             name: "French Onion Soup Au Gratin",
             price: 14.95,
-            dishes: [
-              { name: "Topped with Toasted Baguette and Melted Mozzarella" }
-            ]
+            description: "Topped with Toasted Baguette and Melted Mozzarella"
           },
           {
             name: "Fried Calamari",
             price: 18.95,
-            dishes: [
-              { name: "Fried to Perfection with Spicy Tomato Sauce" }
-            ]
+            description: "Fried to Perfection with Spicy Tomato Sauce"
           },
           {
             name: "Crab Cake Appetizer",
             price: 19.95,
-            dishes: [
-              { name: "Select Jumbo Crab Meat, Delicately Pan Fried" }
-            ]
+            description: "Select Jumbo Crab Meat, Delicately Pan Fried"
           },
           {
             name: "Jumbo Gulf Shrimp Cocktail",
             price: 20.95,
-            dishes: [
-              { name: "Served with Horseradish-Chili Sauce (4)" }
-            ]
+            description: "Served with Horseradish-Chili Sauce (4)"
           },
           {
             name: "Blue Point Oysters",
             price: 20.95,
-            dishes: [
-              { name: "Plump and Pristine Nestled on a Bed of Crushed Ice (6)" }
-            ]
+            description: "Plump and Pristine Nestled on a Bed of Crushed Ice (6)"
           }
         ]
       },
@@ -77,50 +59,22 @@ const dinnerMenu: RestaurantMenu = {
           {
             name: "Caesar",
             price: 21.95,
-            dishes: [
-              { name: "Romaine Lettuce, Traditional Dressing Shaved Parmesan Cheese and Garlic Croutons" }
-            ]
+            description: "Romaine Lettuce, Traditional Dressing Shaved Parmesan Cheese and Garlic Croutons"
           },
           {
             name: "Roasted Golden Beet Salad",
             price: 25.95,
-            dishes: [
-              { name: "Arugula, Pistachios, Julienne Carrots and Goat Cheese Raspberry Vinaigrette" }
-            ]
+            description: "Arugula, Pistachios, Julienne Carrots and Goat Cheese Raspberry Vinaigrette"
           },
           {
             name: "Baby Spinach & Gorgonzola Salad",
             price: 26.95,
-            dishes: [
-              { name: "Mushrooms, Bacon, Gorgonzola, Pomegranate Seeds, Pecans, Honey White Balsamic Vinaigrette" }
-            ]
+            description: "Mushrooms, Bacon, Gorgonzola, Pomegranate Seeds, Pecans, Honey White Balsamic Vinaigrette"
           },
           {
             name: "Spring Salad",
             price: 23.95,
-            dishes: [
-              { name: "Asparagus, Apple, Radish, Feta. Avocado, Toasted Walnuts, Roasted Chickpeas, Strawberries with Mesclun and Herb White Balsamic Vinaigrette" }
-            ]
-          },
-          {
-            name: "ADD: Chicken",
-            price: 8,
-            dishes: []
-          },
-          {
-            name: "ADD: Salmon",
-            price: 11,
-            dishes: []
-          },
-          {
-            name: "ADD: Shrimp",
-            price: 12,
-            dishes: []
-          },
-          {
-            name: "ADD: Steak",
-            price: 13,
-            dishes: []
+            description: "Asparagus, Apple, Radish, Feta. Avocado, Toasted Walnuts, Roasted Chickpeas, Strawberries with Mesclun and Herb White Balsamic Vinaigrette. ADD: Chicken $8 Salmon $11 Shrimp $12 Steak $13",
           }
         ]
       },
@@ -130,16 +84,12 @@ const dinnerMenu: RestaurantMenu = {
           {
             name: "Traditional Fried New England Cod",
             price: 27.95,
-            dishes: [
-              { name: "Ale Battered Filet of Cod, Deep Fried to a Golden Brown Served with French Fries" }
-            ]
+            description: "Ale Battered Filet of Cod, Deep Fried to a Golden Brown Served with French Fries"
           },
           {
             name: "Shepherd’s Pie",
             price: 27.95,
-            dishes: [
-              { name: "Braised Chopped Beef and Veal, Mixed Vegetables Crowned with Mashed Potatoes" }
-            ]
+            description: "Braised Chopped Beef and Veal, Mixed Vegetables Crowned with Mashed Potatoes"
           }
         ]
       },
@@ -149,30 +99,22 @@ const dinnerMenu: RestaurantMenu = {
           {
             name: "Rosie O’grady’s 10 Oz Burger",
             price: 22.95,
-            dishes: [
-              { name: "Lettuce, Tomato and Dill Pickle French Fries or Sweet Potato Fries" }
-            ]
+            description: "Lettuce, Tomato and Dill Pickle French Fries or Sweet Potato Fries" 
           },
           {
             name: "California Burger",
             price: 23.95,
-            dishes: [
-              { name: "Topped with Melted Monterey Jack and Sliced Avocado Served with Chipotle Aioli & French Fries" }
-            ]
+            description: "Topped with Melted Monterey Jack and Sliced Avocado Served with Chipotle Aioli & French Fries" 
           },
           {
             name: "Rosie’s Beyond Burger",
             price: 23.95,
-            dishes: [
-              { name: "Plant-Based – Served with Sautéed Mushrooms and Onions Sweet Potato Fries" }
-            ]
+            description: "Plant-Based – Served with Sautéed Mushrooms and Onions Sweet Potato Fries" 
           },
           {
             name: "Turkey Burger Classic",
             price: 23.95,
-            dishes: [
-              { name: "Topped with Melted Mozzarella, Sautéed Mushrooms and Onions with Sweet Potato Fries" }
-            ]
+            description: "Topped with Melted Mozzarella, Sautéed Mushrooms and Onions with Sweet Potato Fries" 
           }
         ]
       },
@@ -182,85 +124,61 @@ const dinnerMenu: RestaurantMenu = {
           {
             name: "Norwegian Salmon",
             price: 31.95,
-            dishes: [
-              { name: "Broiled. Served with Beurre Blanc, Asparagus and Mashed Potatoes" }
-            ]
+            description: "Broiled. Served with Beurre Blanc, Asparagus and Mashed Potatoes"
           },
           {
             name: "Jumbo Crab Mac And Cheese",
             price: 29.95,
-            dishes: [
-              { name: "Macaroni Tossed with Jumbo Crabmeat, Creamy Gruyère and Sharp Cheddar Sauce" }
-            ]
+            description: "Macaroni Tossed with Jumbo Crabmeat, Creamy Gruyère and Sharp Cheddar Sauce"
           },
           {
             name: "Lobster Ravioli",
             price: 35.95,
-            dishes: [
-              { name: "Served with Pink Vodka Sauce, garnished with Fresh Lobster Meat" }
-            ]
+            description: "Served with Pink Vodka Sauce, garnished with Fresh Lobster Meat"
           },
           {
             name: "Shrimp And Scallop Risotto",
             price: 35.95,
-            dishes: [
-              { name: "Asparagus Tips, Roasted Peppers, Sweet Peas, Fennel and Wild Mushrooms" }
-            ]
+            description: "Asparagus Tips, Roasted Peppers, Sweet Peas, Fennel and Wild Mushrooms"
           },
           {
             name: "Seafood Linguini Marinara",
             price: 35.95,
-            dishes: [
-              { name: "Mussels, Clams, Shrimps & Scallops in a Tangy Marinara Sauce" }
-            ]
+            description: "Mussels, Clams, Shrimps & Scallops in a Tangy Marinara Sauce"
           },
           {
             name: "Day Boat Sea Scallops",
             price: 36.95,
-            dishes: [
-              { name: "Pan Seared, Served with Wilted Spinach and Lemon Herb Linguini" }
-            ]
+            description: "Pan Seared, Served with Wilted Spinach and Lemon Herb Linguini"
           },
           {
             name: "Maryland Crab Cakes",
             price: 38.95,
-            dishes: [
-              { name: "Select Jumbo Crab Meat, Delicately Pan Fried Served with Broccoli and Mashed Potatoes" }
-            ]
+            description: "Select Jumbo Crab Meat, Delicately Pan Fried Served with Broccoli and Mashed Potatoes"
           },
           {
             name: "Chicken Florentine",
             price: 29.95,
-            dishes: [
-              { name: "Pan Seared Chicken with Wilted Spinach, Mozzarella and Sherry Mushroom Sauce over Linguini" }
-            ]
+            description: "Pan Seared Chicken with Wilted Spinach, Mozzarella and Sherry Mushroom Sauce over Linguini"
           },
           {
             name: "Chicken Piccata",
             price: 29.95,
-            dishes: [
-              { name: "Sautéed with White Wine, Lemon, Capers Wilted Spinach and Mashed Potatoes" }
-            ]
+            description: "Sautéed with White Wine, Lemon, Capers Wilted Spinach and Mashed Potatoes"
           },
           {
             name: "Chicken Parmigiana",
             price: 28.95,
-            dishes: [
-              { name: "Homemade Zesty Marinara and Melted Mozzarella Served over Linguini" }
-            ]
+            description: "Homemade Zesty Marinara and Melted Mozzarella Served over Linguini"
           },
           {
             name: "Wild Mushroom Ravioli",
             price: 28.95,
-            dishes: [
-              { name: "Vodka Sauce and Spinach" }
-            ]
+            description: "Vodka Sauce and Spinach"
           },
           {
             name: "Fish Of The Day",
-            dishes: [
-              { name: "Ask Server" }
-            ]
+            description: "Ask Server"
           }
         ]
       },
@@ -269,45 +187,35 @@ const dinnerMenu: RestaurantMenu = {
         subCategory: [
           {
             name: "Petit Filet Mignon 8 Oz",
-            price: 48.95,
-            dishes: []
+            description: "Served with Choice of Potato",
+            price: 48.95
           },
           {
             name: "Prime Filet Mignon 12 Oz",
-            price: 56.95,
-            dishes: []
+            price: 56.95
           },
           {
             name: "Prime Boneless Rib Steak 16 Oz",
-            price: 59.95,
-            dishes: []
+            price: 59.95
           },
           {
             name: "New York Cut Sirloin Steak 14 Oz",
-            price: 49.95,
-            dishes: []
+            price: 49.95
           },
           {
             name: "Medallions Of Filet Mignon",
-            price: 46.95,
-            dishes: []
+            price: 46.95
           },
           {
             name: "Rack Of Lamb",
-            price: 45.95,
-            dishes: []
+            price: 45.95
+          },
+          {
+            name: "Au Poivre Vert",
+            description: "Green Peppercorns, Brandy, Touch of Cream"
           }
         ]
       },
-      {
-        name: "Au Poivre Vert",
-        subCategory: [
-          {
-            name: "Green Peppercorns, Brandy, Touch of Cream",
-            dishes: []
-          }
-        ]
-      }
     ]
   };
 

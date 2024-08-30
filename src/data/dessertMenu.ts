@@ -9,27 +9,26 @@ const dessertMenu: RestaurantMenu = {
       subCategory: [
         {
           name: "Crème Brulée",
-          dishes: [],
         },
         {
           name: "Homemade Ny Cheesecake",
-          dishes: [{ name: "Strawberry Coulis" }],
+          description: "Strawberry Coulis"
         },
         {
           name: "Chocolate Molton Cake",
-          dishes: [{ name: "Served Warm with Ice Cream or Whipped Cream" }],
+          description: "Served Warm with Ice Cream or Whipped Cream"
         },
         {
           name: "Apple Pie À La Mode",
-          dishes: [{ name: "Served warm with Ice Cream" }],
+          description: "Served warm with Ice Cream"
         },
         {
           name: "Chocolate Raspberry Cake",
-          dishes: [],
+          description: ""
         },
         {
           name: "Ice Cream &Amp; Sorbet (3 Scoops)",
-          dishes: [{ name: "Vanilla, Chocolate, Lemon" }],
+          description: "Vanilla, Chocolate, Lemon"
         },
       ],
     },
@@ -39,31 +38,25 @@ const dessertMenu: RestaurantMenu = {
       subCategory: [
         {
           name: "White Russian",
-          dishes: [{ name: "Kahlúa, Sausage Tree Vodka, Cream" }],
+          description: "Kahlúa, Sausage Tree Vodka, Cream"
         },
         {
           name: "Last Word",
-          dishes: [
-            { name: "Gunpowder Gin, Maraschino Liqueur, Chartreuse, Lime" },
-          ],
+          description: "Gunpowder Gin, Maraschino Liqueur, Chartreuse, Lime"
         },
         {
           name: "Expresso Martini",
-          dishes: [{ name: "Aspen Vodka, Kahlua, Expresso" }],
+          description: "Aspen Vodka, Kahlua, Expresso"
         },
         {
           name: "Manhattan",
-          dishes: [{ name: "Bulleit Rye, Sweet Vermouth, Angostura Bitters" }],
+          description: "Bulleit Rye, Sweet Vermouth, Angostura Bitters"
         },
         {
           name: "20 Year Tawny Porto",
-          dishes: [{ name: "Taylor Fladgate – Douro, Portugal" }],
+          description: "Taylor Fladgate – Douro, Portugal"
         },
       ],
-    },
-    {
-      name: "Expresso – Cappuccino – Herbal Tea",
-      subCategory: [],
     },
   ],
 };

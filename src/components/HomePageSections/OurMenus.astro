@@ -2,10 +2,10 @@
 import BrunchImg from "../../assets/images/services/brunch.png";
 import ChildrenImg from "../../assets/images/services/children.jpg";
 import DinnerImg from "../../assets/images/services/dinner.jpg";
-import LiquorImg from "../../assets/images/services/liquor.png";
+import BeerImg from "../../assets/images/services/beers.png";
+import cocktailImg from "../../assets/images/services/cocktails.png";
+import dessertImg from "../../assets/images/services/desserts.png";
 import LunchImg from "../../assets/images/services/lunch.jpg";
-import PretheatreImg from "../../assets/images/services/pretheatre.png";
-import RestaurantWeekImg from "../../assets/images/services/restaurantweek.png";
 import WinesImg from "../../assets/images/services/wines.jpg";
 import { t } from "i18next";
 import Service from "../Service.astro";
@@ -16,42 +16,49 @@ const services = [
     description: t("our-menus.dinner.description"),
     image: DinnerImg,
     linkToPDF: "https://rosieogradys.com/dinner.pdf",
-    linkToMenu: "/assets/menus/wine-menu.html"
+    linkToMenu: "/Menus/DinnerMenu"
   },
   {
     title: t("our-menus.lunch"),
     description: t("our-menus.lunch.description"),
     image: LunchImg,
     linkToPDF: "https://rosieogradys.com/lunch.pdf",
-    linkToMenu: "/assets/menus/lunch-menu.html"
+    linkToMenu: "/Menus/LunchMenu"
   },
   {
     title: t("our-menus.children"),
     description: t("our-menus.children.description"),
     image: ChildrenImg,
     linkToPDF: "https://rosieogradys.com/children.pdf",
-    linkToMenu: "/assets/menus/children-menu.html"
+    linkToMenu: "/Menus/ChildrenMenu"
   },
   {
     title: t("our-menus.bar"),
     description: t("our-menus.bar.description"),
-    image: WinesImg,
+    image: BeerImg,
     linkToPDF: "https://rosieogradys.com/bar.pdf",
-    linkToMenu: "/assets/menus/bar-menu.html"
+    linkToMenu: "/Menus/BarMenu"
   },
   {
     title: t("our-menus.wines"),
     description: t("our-menus.wines.description"),
     image: WinesImg,
     linkToPDF: "https://rosieogradys.com/wine.pdf",
-    linkToMenu: "/assets/menus/wine-menu.html"
+    linkToMenu: "/Menus/WineMenu"
   },
   {
     title: t("our-menus.cocktails"),
     description: t("our-menus.cocktails.description"),
-    image: LiquorImg,
+    image: cocktailImg,
     linkToPDF: "https://rosieogradys.com/cocktails.pdf",
-    linkToMenu: "/assets/menus/cocktail-menu.html"
+    linkToMenu: "/Menus/CocktailMenu"
+  },
+  {
+    title: t("our-menus.desserts"),
+    description: t("our-menus.desserts.description"),
+    image: dessertImg,
+    linkToPDF: "https://rosieogradys.com/desserts.pdf",
+    linkToMenu: "/Menus/DessertMenu"
   },
 ];
 ---

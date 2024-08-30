@@ -168,6 +168,8 @@
   "our-menus.restaurant-week.description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus totam expedita nostrum! Magnam porro ad aliquam animi quidem vitae sapiente, molestiae in necessitatibus nam, rerum consequuntur, illo enim commodi mollitia dolorem aperiam! Commodi qui maxime soluta temporibus fugiat quibusdam incidunt dolorum saepe libero sit. Sed?",
   "our-menus.wines": "Wines",
   "our-menus.wines.description": "We have great options from different countries. Take a look Cheers !!",
+  "our-menus.desserts": "Desserts",
+  "our-menus.desserts.description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus totam expedita nostrum! Magnam porro ad aliquam animi quidem vitae sapiente",
   "our-menus.bar": "Bar",
   "our-menus.bar.description": "A great menú for those who wants instant gratification. We will not disappoint you.",
   "our-menus.liquor": "Liquor",
@@ -180,5 +182,6 @@
   "reservations.news-signup": "Discover things to do in New York City",
   "reservations.sun-to-tue": "Sun - Tue",
   "reservations.wed-to-sat": "Wed - Sat",
-  "reservations.mon-to-sun": "Mon - Sun"
+  "reservations.mon-to-sun": "Mon - Sun",
+  "kids-only": "(12 YEARS AND UNDER ONLY)"
 }

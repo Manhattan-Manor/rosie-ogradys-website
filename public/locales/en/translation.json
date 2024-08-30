@@ -128,7 +128,7 @@
   "venues.seated": "Seated",
   "venues.buffet": "Buffet",
   "venues.theater": "Theater",
-  "venues.theater-with-refreshments":"Theater with refreshments",
+  "venues.theater-with-refreshments": "Theater with refreshments",
   "venues.long-table": "Long tables",
   "venues.individual-table": "Individual tables",
   "who-we-are": "Who We Are",
@@ -181,5 +181,6 @@
   "reservations.sun-to-tue": "Sun - Tue",
   "reservations.wed-to-sat": "Wed - Sat",
   "reservations.mon-to-sun": "Mon - Sun",
-  "hd-video-suit": "HD video by the360 Suite"
+  "hd-video-suit": "HD video by the360 Suite",
+  "terms-and-conditions": "Terms and conditions"
 }

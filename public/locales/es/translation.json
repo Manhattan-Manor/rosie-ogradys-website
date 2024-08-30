@@ -127,7 +127,7 @@
   "venues.seated": "Sentado",
   "venues.buffet": "Buffet",
   "venues.theater": "Teatro",
-  "venues.theater-with-refreshments":"Teatro con refrescos",
+  "venues.theater-with-refreshments": "Teatro con refrescos",
   "venues.long-table": "Mesas largas",
   "venues.individual-table": "Mesas individuales",
   "who-we-are": "Quiénes Somos",
@@ -180,5 +180,6 @@
   "reservations.sun-to-tue": "Dom - Mar",
   "reservations.wed-to-sat": "Mie - Sab",
   "reservations.mon-to-sun": "Lun - Dom",
-  "hd-video-suit": "Video en HD de 360 Suite"
+  "hd-video-suit": "Video en HD de 360 Suite",
+  "terms-and-conditions": "Términos y condiciones"
 }

@@ -19,9 +19,6 @@ import { Image } from "@astrojs/image/components";
     <div style="display: inherit;">
       <ul class="menu">
         <li>
-          <a href="#contact-us-section">{t("common.live")}</a>
-        </li>
-        <li>
           <a
             id="nye-link"
             href="https://nye.rosieogradys.com/"
@@ -93,10 +90,6 @@ import { Image } from "@astrojs/image/components";
         text-transform: uppercase;
         margin-left: 20px;
         font-size: 14px;
-
-        &:first-child a {
-          color: red;
-        }
 
         &:nth-child(3) a {
           color: white;
@@ -231,7 +224,8 @@ import { Image } from "@astrojs/image/components";
     } else {
       // If we are on desktop, change SPA to ESPAÑOL and NYE to NEW YEAR'S EVE
       if (spaLink) spaLink.innerHTML = t("common.spanish") || "ESPAÑOL";
-      if (nyeLink) nyeLink.innerHTML = t("common.nye.party") || "NEW YEAR'S EVE PARTY";
+      if (nyeLink)
+        nyeLink.innerHTML = t("common.nye.party") || "NEW YEAR'S EVE PARTY";
     }
   };
 

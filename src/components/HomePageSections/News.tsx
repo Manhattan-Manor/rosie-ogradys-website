@@ -57,7 +57,8 @@ const News: FC = () => {
 
       <div className="col-md-12 text-center">
         <a
-        href="https://www.kayak.com/New-York.15830.guide"
+        href="https://www.youtube.com/watch?v=KaMOfAnA7yY"
+        target="_blank"
         className="btn btn-primary text-uppercase px-4 py-3 mt-4"
         >{t("reservations.news-signup")}
         </a>

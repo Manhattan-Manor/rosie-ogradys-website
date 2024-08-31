@@ -1,5 +1,5 @@
 ---
-import logo from "../assets/images/favicon.png";
+import logo from "../assets/images/logo.svg";
 import { LanguageSelector } from "astro-i18next/components";
 import { t } from "i18next";
 import { Image } from "@astrojs/image/components";
@@ -13,7 +13,7 @@ import { Image } from "@astrojs/image/components";
         <span>{t("common.sound")}</span>
       </button>
       <a class="navbar-brand" href="#">
-        <Image src={logo} alt="Rosie O' Grady's Logo" width={40} height={40} />
+        <Image src={logo} alt="Rosie O' Grady's Logo" width={80} height={40} />
       </a>
     </div>
     <div style="display: inherit;">

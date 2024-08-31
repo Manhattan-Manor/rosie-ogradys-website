@@ -1,6 +1,6 @@
 ---
 import Footer from "../components/Footer.astro";
-import favicon from "../assets/images/favicon.png?url";
+import favicon from "../assets/images/logo.svg?url";
 import logo from "../assets/images/logo.svg";
 import { Image } from "@astrojs/image/components";
 import { LanguageSelector } from "astro-i18next/components";
@@ -43,7 +43,7 @@ const { title } = Astro.props;
       }
 
       .logo {
-        width: 30px;
+        width: 80px;
       }
 
       .language-selector {
@@ -66,8 +66,8 @@ const { title } = Astro.props;
             src={logo}
             alt="Logo"
             class="d-inline-block align-text-top logo"
-            width={30}
-            height={45}
+            width={80}
+            height={40}
             format="webp"
           />
         </a>

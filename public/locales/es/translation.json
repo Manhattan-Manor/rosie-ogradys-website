@@ -167,6 +167,8 @@
   "our-menus.restaurant-week.description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus totam expedita nostrum! Magnam porro ad aliquam animi quidem vitae sapiente, molestiae in necessitatibus nam, rerum consequuntur, illo enim commodi mollitia dolorem aperiam! Commodi qui maxime soluta temporibus fugiat quibusdam incidunt dolorum saepe libero sit. Sed?",
   "our-menus.wines": "Vinos",
   "our-menus.wines.description": "Tenemos muy buenas opciones de diferentes países. Echa un vistazo, Salud!!",
+  "our-menus.desserts": "Postres",
+  "our-menus.desserts.description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus totam expedita nostrum! Magnam porro ad aliquam animi quidem vitae sapiente",
   "our-menus.bar": "Bar",
   "our-menus.bar.description": "Un gran menú para los que buscan una gratificación instantánea. No le decepcionaremos.",
   "our-menus.liquor": "Licores",
@@ -181,5 +183,6 @@
   "reservations.wed-to-sat": "Mie - Sab",
   "reservations.mon-to-sun": "Lun - Dom",
   "hd-video-suit": "Video en HD de 360 Suite",
-  "terms-and-conditions": "Términos y condiciones"
+  "terms-and-conditions": "Términos y condiciones",
+  "kids-only": "(Solo menores de 12 años)"
 }

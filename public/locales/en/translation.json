@@ -132,7 +132,7 @@
   "venues.long-table": "Long tables",
   "venues.individual-table": "Individual tables",
   "who-we-are": "Who We Are",
-  "who-we-are.description": "New York’s Legendary Bar and Restaurant was Established in 1973, it is centrally located near Times Square, Rockefeller Center, the Jacob Javits Convention Center, Central Park and a short distance from several major museums and renowned hotels. Come in and enjoy the friendly service and delicious cuisine that has made ROSIE O’GRADY’S a Midtown favorite for over 40 years. Rosie O’Grady’s has two event spaces, a private dining room and private bar available for you to host larger groups.  Same food, same service in a more intimate setting.  Go to manhattanmanor.com to learn more or call to speak to our events department.",
+  "who-we-are.description": "New York’s Legendary Bar and Restaurant was Established in 1973, it is centrally located near Times Square, Rockefeller Center, the Jacob Javits Convention Center, Central Park and a short distance from several major museums and renowned hotels. Come in and enjoy the friendly service and delicious cuisine that has made ROSIE O’GRADY’S a Midtown favorite for over 40 years. Rosie O’Grady’s has two event spaces, a private dining room and private bar available for you to host larger groups.  Same food, same service in a more intimate setting.  Go to <a href='https://manhattanmanor.com' target='_blank' style='color:red;'>manhattanmanor.com</a> to learn more or call to speak to our events department.",
   "common.event-sold-out": "This event is sold out",
   "common.join-waiting-list": "Join our waiting list",
   "waiting-list-form.successs-message": "Thank you for joining our waiting list. We will contact you if tickets become available.",

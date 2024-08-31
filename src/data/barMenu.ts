@@ -191,16 +191,6 @@ const barMenu: RestaurantMenu = {
           { name: "Lemon Sorbet" },
           { name: "Homemade Ny Cheesecake" }
         ]
-      },
-      {
-        name:"",
-        subCategory: [
-          { name: "Please Ask Your Server About Our Daily Menu Specials Please Let Your Server Know If You Have"},
-          { name: "A Food Allergy Or Dietary Concern, We Will Try Our Best To Accommodate Your Special Request"},
-          { name: "* Gluten Free Menu Items Pastas May Be Substituted With Gluten Free Linguini"},
-          { name: "* Prices Include 2.8% Credit Card Merchant Fee, Price Adjusted For Cash And Debit Card Payments."},
-
-        ]
       }
     ]
   };  

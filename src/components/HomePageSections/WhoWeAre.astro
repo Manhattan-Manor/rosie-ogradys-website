@@ -17,8 +17,9 @@ import { t } from "i18next";
     </div>
     <div class="col-12 col-md-6 text">
       <h1>{t("who-we-are")}</h1>
-      <p>
-        {t("who-we-are.description")}
+      <p set:html={t("who-we-are.description")}>
+        <!-- {{ __html: t("who-we-are.description") }} -->
+        <!-- {t("who-we-are.description")}  -->
       </p>
     </div>
   </div>

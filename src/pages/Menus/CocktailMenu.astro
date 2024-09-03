@@ -24,7 +24,10 @@ const menu = cocktailMenu;
             {
             menu.categories?.slice(0, 4).map((category) => (
                 <div>
-                <h3 >{category.name}</h3>
+                <h3 class="dish-categories text-start d-flex justify-content-between align-items-center">
+                    {category.name}
+                    { category.price && <span >${category.price}</span>}
+                </h3>
                 <hr />
                 <ul>
                     {
@@ -43,7 +46,7 @@ const menu = cocktailMenu;
                     <li>
                                 <p class="dish-categories text-start d-flex justify-content-between align-items-center">
                                     {subCat.name}
-                                    { subCat.price && <span class="dish-categories me-3">{subCat.price}</span>}
+                                    { subCat.price && <span class="dish-categories me-3">${subCat.price}</span>}
                                 </p>
                                 {
                                     subCat.dishes &&
@@ -60,7 +63,7 @@ const menu = cocktailMenu;
                                         <ol>
                                             <p class="dish-categories text-start d-flex justify-content-between align-items-center">
                                             {ssub.name}
-                                            { subCat.price && <span class="dish-categories me-3">{subCat.price}</span>}
+                                            { ssub.price && <span class="dish-categories me-3">${ssub.price}</span>}
                                         </p>
                                             {
                                                 ssub.dishes?.map((dish) => (
@@ -84,7 +87,10 @@ const menu = cocktailMenu;
             {
             menu.categories?.slice(4, menu.categories.length).map((category) => (
                 <div class="container">
-                <h3 >{category.name}</h3>
+                <h3 class="dish-categories text-start d-flex justify-content-between align-items-center">
+                    {category.name}
+                    { category.price && <span >${category.price}</span>}
+                </h3>
                 <hr />
                 <ul>
                     {
@@ -103,7 +109,7 @@ const menu = cocktailMenu;
                     <li>
                                 <p class="dish-categories text-start d-flex justify-content-between align-items-center">
                                     {subCat.name}
-                                    { subCat.price && <span class="dish-categories me-3">{subCat.price}</span>}
+                                    { subCat.price && <span class="dish-categories me-3">${subCat.price}</span>}
                                 </p>
                                 {
                                     subCat.dishes &&
@@ -120,7 +126,7 @@ const menu = cocktailMenu;
                                         <ol>
                                             <p class="dish-categories text-start d-flex justify-content-between align-items-center">
                                             {ssub.name}
-                                            { subCat.price && <span class="dish-categories me-3">{subCat.price}</span>}
+                                            { ssub.price && <span class="dish-categories me-3">${ssub.price}</span>}
                                         </p>
                                             {
                                                 ssub.dishes?.map((dish) => (

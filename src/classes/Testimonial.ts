@@ -24,7 +24,7 @@ class Testimonial {
     const locale = i18next.language;
     const response = await fetch(
       import.meta.env.PUBLIC_CMS_API_ROUTE +
-        "/content/items/testimonials?locale=" +
+        "/content/items/rosie-testimonials?locale=" +
         locale,
       {
         method: "GET",

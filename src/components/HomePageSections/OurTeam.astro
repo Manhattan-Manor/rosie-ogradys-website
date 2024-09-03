@@ -1,37 +1,52 @@
 ---
-import CarolineCartyImg from "../../assets/images/team/Caroline_Carty.webp";
-import AmandaPilarSmithImg from "../../assets/images/team/Amanda_Smith.webp";
-import MaryBurkeImg from "../../assets/images/team/Mary_Burke.webp";
-import TeamItem from "../TeamItem.astro";
+import { Image } from "@astrojs/image/components";
+import CarolineImg from "../../assets/images/team/Caroline_Carty.webp";
 import { t } from "i18next";
-
-const team = [
-  {
-    name: "Caroline Carty",
-    position: t("our-team.caroline-carty.position"),
-    description: t("our-team.caroline-carty.description"),
-    image: CarolineCartyImg,
-  },
-  {
-    name: "Amanda Pilar Smith",
-    position: t("our-team.amanda-smith.position"),
-    description: t("our-team.amanda-smith.description"),
-    image: AmandaPilarSmithImg,
-  },
-];
 ---
 
 <section class="container" id="team-section">
   <h1 class="text-center fw-bold mb-4" data-aos="fade-up">{t("our-team")}</h1>
+  <p class="text-center">{t("our-team.description")}</p>
 
-  {
-    team.map((item, index) => {
-      const animationDelay = index * 100;
-      return (
-        <div data-aos="fade-up" data-aos-delay={animationDelay}>
-          <TeamItem {...item} />
-        </div>
-      );
-    })
-  }
+  <div class="d-flex justify-content-between">
+    <div
+      class="text-center d-flex justify-content-center flex-column align-items-center"
+    >
+      <Image
+        class="d-block mx-md-auto mw-100 mb-3"
+        src={CarolineImg}
+        alt="Mike Carty"
+        width={250}
+        height={250}
+        format="webp"
+      />
+      <h2>Mike Carty</h2>
+    </div>
+    <div
+      class="text-center d-flex justify-content-center flex-column align-items-center"
+    >
+      <Image
+        class="d-block mx-md-auto mw-100 mb-3"
+        src={CarolineImg}
+        alt="Hamdi Elkadi"
+        width={250}
+        height={250}
+        format="webp"
+      />
+      <h2>Hamdi Elkadi</h2>
+    </div>
+    <div
+      class="text-center d-flex justify-content-center flex-column align-items-center"
+    >
+      <Image
+        class="d-block mx-md-auto mw-100 mb-3"
+        src={CarolineImg}
+        alt="Caroline Carty"
+        width={250}
+        height={250}
+        format="webp"
+      />
+      <h2>Caroline Carty</h2>
+    </div>
+  </div>
 </section>

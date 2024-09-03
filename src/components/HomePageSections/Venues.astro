@@ -1,10 +1,8 @@
 ---
-import restaurantMain from "../../assets/images/venues/restaurant/main.jpg";
 import ManhattanMain from "../../assets/images/venues/manhattan-manor/manhattan-manor.jpg";
 import BroadWayRoom from "../../assets/images/venues/broadway-room/broadway-room.jpg";
 import TaftBar from "../../assets/images/venues/taft-bar/taft-bar.jpg";
 import PrivateDinningRoom from "../../assets/images/venues/private-dinning-room/private-dinning-room.jpg";
-import skylightFloorplans from "../../assets/documents/floorplan-skylight.pdf";
 import Venue from "../Venue.astro";
 import { t } from "i18next";
 
@@ -28,80 +26,6 @@ const privateDinningRoomGallery = (
   await Astro.glob("../../assets/images/venues/private-dinning-room/*.jpg")
 ).map((image) => image.default);
 
-// const mmVenues = [
-//   {
-//     id: 1,
-//     name: "Skylight Room",
-//     mainImage: skylightMain,
-//     floorPlans: skylightFloorplans,
-//     video: "https://www.youtube.com/embed/zVe3RrmbNjw",
-//     gallery: skylightGallery,
-//     description: `
-//     <h4>${t("venues.size")}</h4>
-//     <ul>
-//       <li>3,408 ${t("venues.square-feet")}</li>
-//     </ul>
-//     <h4>${t("venues.capacity")}</h4>
-//     <ul>
-//       <li>275 ${t("venues.cocktail-reception")}</li>
-//       <li>275 ${t("venues.seated-dinner")}</li>
-//       <li>250 ${t("venues.seated-dinner-dance-floor")}</li>
-//       <li>125 ${t("venues.classroom-conference")}</li>
-//       <li>225 ${t("venues.theatre-seating")}</li>
-//       <li>120 ${t("venues.u-shape-conference")}</li>
-//     </ul>
-//     `,
-//   },
-//   {
-//     id: 2,
-//     name: "Manhattan Club",
-//     mainImage: manhattanClubMain,
-//     floorPlans: manhattanClubFloorplans,
-//     video: "https://www.youtube.com/embed/zVe3RrmbNjw",
-//     gallery: manhattanClubGallery,
-//     description: `
-//     <h4>${t("venues.size")}</h4>
-//     <ul>
-//       <li>3,520 ${t("venues.square-feet")}</li>
-//     </ul>
-//     <h4>${t("venues.capacity")}</h4>
-//     <ul>
-//       <li>280 ${t("venues.cocktail-reception")}</li>
-//       <li>250 ${t("venues.seated-dinner")}</li>
-//       <li>200 ${t("venues.seated-dinner-dance-floor")}</li>
-//       <li>100 ${t("venues.classroom-conference")}</li>
-//       <li>200 ${t("venues.theatre-seating")}</li>
-//       <li>120 ${t("venues.u-shape-conference")}</li>
-//     </ul>
-//     `,
-//   },
-// ];
-
-const restaurantVenues = [
-  {
-    id: 3,
-    name: t("the-restaurant") || "The Restaurant",
-    mainImage: restaurantMain,
-    floorPlans: skylightFloorplans,
-    video: "https://youtu.be/zVe3RrmbNjw",
-    gallery: skylightGallery,
-    description: `
-    <h4>${t("venues.size")}</h4>
-    <ul>
-      <li>3,408 ${t("venues.square-feet")}</li>
-    </ul>
-    <h4>${t("venues.capacity")}</h4>
-    <ul>
-      <li>275 ${t("venues.cocktail-reception")}</li>
-      <li>275 ${t("venues.seated-dinner")}</li>
-      <li>250 ${t("venues.seated-dinner-dance-floor")}</li>
-      <li>125 ${t("venues.classroom-conference")}</li>
-      <li>225 ${t("venues.theatre-seating")}</li>
-      <li>120 ${t("venues.u-shape-conference")}</li>
-    </ul>
-    `,
-  },
-];
 
 const rosieVenues = [
   {
@@ -165,7 +89,7 @@ const rosieVenues = [
   },
   {
     id: 4,
-    name: "Private Dinning Room",
+    name: "Private Dining Room",
     mainImage: PrivateDinningRoom,
     gallery: privateDinningRoomGallery,
     viewVirtualTour: "https://rosieogradys.com/private-event",
@@ -188,7 +112,6 @@ const rosieVenues = [
   <h1 data-aos="fade-up">{t("venues")}</h1>
 
   <p data-aos="fade-up">
-    <span class="d-block mb-3 fw-bold">{t("rosie-pub-broadway-room")}</span>
     {t("rosie-pub-broadway-room.description")}
   </p>
 
@@ -202,21 +125,6 @@ const rosieVenues = [
     }
   </div>
 
-  <!-- <p data-aos="fade-up">
-    <span class="d-block mb-3 fw-bold">Manhattan Manor</span>
-    {t("venues.description")}
-  </p>
-
-  <div class="row venues">
-    {
-      mmVenues.map((venue) => (
-        <div class="col-12 col-md-6 d-flex justify-content-center">
-          <Venue {...venue} />
-        </div>
-      ))
-    }
-  </div> -->
-
   <a
     href="https://www.youtube.com/watch?v=WC94nGWjqvM"
     target="_blank"
@@ -228,7 +136,7 @@ const rosieVenues = [
 
 <style lang="scss">
   .container {
-    margin-top: 60px;
+    margin-top: 180px;
     margin-bottom: 60px;
     text-align: center;
   }

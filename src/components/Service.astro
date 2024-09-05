@@ -6,11 +6,12 @@ interface Props {
   description: string;
   image: ImageMetadata;
   textStyle?: string;
-  linkToPDF: String;
-  linkToMenu: string;
+  linkToPDF?: string;
+  linkToMenu?: string;
 }
 
-const { title, description, image, textStyle, linkToPDF, linkToMenu } = Astro.props;
+const { title, description, image, textStyle, linkToPDF, linkToMenu } =
+  Astro.props;
 ---
 
 <!-- An image that, on hover, shows a description with white text and black background, and a small text in front of the image to show what is the description about before hovering -->
@@ -27,14 +28,33 @@ const { title, description, image, textStyle, linkToPDF, linkToMenu } = Astro.pr
   />
   <h5 class="title">{title} <i class="bi bi-chevron-right"></i></h5>
   <div class="overlay">
-
     <div class="text-container">
       <div class="text" set:html={description} style={textStyle} />
-      
-      <div class="button-group">
-        <a href=`${linkToMenu}` target="_blank" class="btn btn-text-primary btn-menu-on-site">Menu on site</a>
-        <a href=`${linkToPDF}` target="_blank" class="btn btn-text-primary btn-menu-on-pdf">Menu on PDF</a>
-      </div>
+
+      {
+        (linkToPDF || linkToMenu) && (
+          <div class="button-group">
+            {linkToMenu && (
+              <a
+                href={linkToMenu}
+                target="_blank"
+                class="btn btn-text-primary btn-menu-on-site"
+              >
+                Menu on site
+              </a>
+            )}
+            {linkToPDF && (
+              <a
+                href={linkToPDF}
+                target="_blank"
+                class="btn btn-text-primary btn-menu-on-pdf"
+              >
+                Menu on PDF
+              </a>
+            )}
+          </div>
+        )
+      }
     </div>
   </div>
 </div>
@@ -120,7 +140,7 @@ const { title, description, image, textStyle, linkToPDF, linkToMenu } = Astro.pr
     font-weight: bold;
   }
 
-  .btn-menu-on-pdf{
+  .btn-menu-on-pdf {
     color: rgb(255, 56, 56);
     margin-right: 20px;
     font-weight: bold;

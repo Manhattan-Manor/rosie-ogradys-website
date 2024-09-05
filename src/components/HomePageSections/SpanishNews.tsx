@@ -1,6 +1,6 @@
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import React, { FC, useEffect, useState } from "react";
-import NewsItem from "../NewsItem";
+import NewsItem from "./NewsItem";
 import { useTranslation } from "react-i18next";
 import NewsItemClass from "../../classes/NewsItem";
 
@@ -29,7 +29,7 @@ const News: FC = () => {
   const init = async () => {
     try {
       setIsLoading(true);
-      const news = await NewsItemClass.getAll();
+      const news = await NewsItemClass.getAllSpanish();
       setNews(news);
     } catch (error) {
       console.error(error);

@@ -8,6 +8,9 @@ const carouselOptions = {
   perPage: 3,
   gap: "1rem",
   arrows: false,
+  classes: {
+    pagination: "splide__pagination news-pagination",
+  },
   breakpoints: {
     576: {
       perPage: 1,

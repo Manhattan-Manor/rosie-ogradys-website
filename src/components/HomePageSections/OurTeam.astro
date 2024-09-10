@@ -1,6 +1,6 @@
 ---
 import { Image } from "@astrojs/image/components";
-import CarolineImg from "../../assets/images/team/Caroline_Carty.webp";
+import CarolineImg from "../../assets/images/team/caroline-carty.png";
 import MikeImg from "../../assets/images/team/mike-carty.png";
 import HamdiImg from "../../assets/images/team/hamdi-elkadi.jpg";
 import { t } from "i18next";
@@ -9,7 +9,9 @@ import { t } from "i18next";
 <section class="container" id="team-section">
   <h1 class="text-center fw-bold mb-4" data-aos="fade-up">{t("our-team")}</h1>
 
-  <div class="d-flex justify-content-center justify-content-md-between flex-wrap">
+  <div
+    class="d-flex justify-content-center justify-content-md-between flex-wrap"
+  >
     <div
       class="text-center d-flex justify-content-center flex-column align-items-center"
     >
@@ -28,19 +30,6 @@ import { t } from "i18next";
     >
       <Image
         class="d-block mx-md-auto mw-100 mb-3"
-        src={HamdiImg}
-        alt="Hamdi Elkadi"
-        width={250}
-        height={250}
-        format="webp"
-      />
-      <h2>Hamdi Elkadi</h2>
-    </div>
-    <div
-      class="text-center d-flex justify-content-center flex-column align-items-center"
-    >
-      <Image
-        class="d-block mx-md-auto mw-100 mb-3"
         src={CarolineImg}
         alt="Caroline Carty"
         width={250}
@@ -48,6 +37,19 @@ import { t } from "i18next";
         format="webp"
       />
       <h2>Caroline Carty</h2>
+    </div>
+    <div
+      class="text-center d-flex justify-content-center flex-column align-items-center"
+    >
+      <Image
+        class="d-block mx-md-auto mw-100 mb-3"
+        src={HamdiImg}
+        alt="Hamdi Elkadi"
+        width={250}
+        height={250}
+        format="webp"
+      />
+      <h2>Hamdi Elkadi</h2>
     </div>
   </div>
 </section>

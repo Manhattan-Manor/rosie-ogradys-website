@@ -20,6 +20,12 @@ const Testimonials: FC = () => {
     }
   };
 
+  const sort = (a: Testimonial, b:Testimonial) => {
+    const posA = a.position ? parseInt(a.position) : Infinity;
+    const posB = b.position ? parseInt(b.position) : Infinity;
+    return posA - posB;
+  };
+
   useEffect(() => {
     init();
   }, []);
@@ -32,7 +38,7 @@ const Testimonials: FC = () => {
 
       {isLoading && <div className="text-center">{t("common.loading")}</div>}
       <div className="row">
-        {testimonials.map((testimonial, index) => (
+        {testimonials.sort(sort).map((testimonial, index) => (
           <div
             className="col-md-4 col-sm-6"
             key={testimonial._id}

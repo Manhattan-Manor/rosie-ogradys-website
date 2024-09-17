@@ -67,11 +67,13 @@ jobs:
         working-directory: ${{ env.BUILD_PATH }}
       - name: List
         run: ls -la ${{ env.BUILD_PATH }}
-      - name: 📂 Sync files
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      - name: Deploy to SFTP server
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
-          server: ftp.nodeaxan.com
-          username: williams@nodeaxan.com
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ${{ env.BUILD_PATH }}/dist/
-          server-dir: ./
+            username: 'dh_vgftmi'
+            server: 'iad1-shared-e1-16.dreamhost.com'
+            port: 22
+            ssh_private_key: ''
+            password: ${{ secrets.FTP_PASSWORD }} 
+            local_path: '${{ env.BUILD_PATH }}/dist/*'
+            remote_path: 'rosieogradys.com/'

@@ -1,0 +1,12 @@
+---
+
+import GiftCardActivationForm from "../components/GiftCardActivationForm";
+import InfoPages from "../layouts/InfoPages.astro";
+import { changeLanguage } from "i18next";
+changeLanguage("en");
+
+---
+
+<InfoPages title="Gift card activation">
+    <GiftCardActivationForm client:only/>
+</InfoPages>

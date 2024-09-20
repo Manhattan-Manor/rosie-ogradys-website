@@ -1,0 +1,141 @@
+@import "colors";
+
+
+.container {
+  max-width: 800px;
+  padding: 20px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: $primary;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+//   border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 0px;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+li h3 {
+//   cursor: pointer;
+  margin: 0;
+  padding: 10px;
+//   background-color: #f0f0f0;
+  border-bottom: 1px solid #ddd;
+  color: $primary;
+}
+
+li div {
+  display: none;
+}
+
+li h3{
+    color: rgb(169, 168, 168);
+}
+
+li.active h3{
+    color: $primary;
+}
+
+li.active div {
+  display: block;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+textarea {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 12px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: $primary;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: darken($primary, 10%);
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+h4 {
+  margin-top: 20px;
+  color: $primary;
+}
+
+p {
+  margin: 10px 0;
+}
+
+// textarea {
+//     width: calc(100% - 20px);
+//     border: 1px solid #ccc;
+// }
+
+.select-wrapper {
+    position: relative;
+    width: calc(100% - 20px);
+  
+    select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: white;
+      font-size: 16px;
+      color: #555;
+      appearance: none;
+      outline: none;
+      cursor: pointer;
+      
+      option {
+        background-color: white;
+        color: #555;
+      }
+  
+      &:focus {
+        border-color: #007bff;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+      }
+    }
+  
+    &:after {
+      content: '▼'; // Flecha personalizada
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      pointer-events: none;
+      color: #999;
+    }
+  }
+  
+  .congratulation {
+    margin-top: 30px;
+    margin-left: 30px;
+  }

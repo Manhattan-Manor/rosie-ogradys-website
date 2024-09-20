@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import i18next from "i18next";
 import "./../assets/styles/GiftCard.scss"; // Importar el archivo de estilos
 import { GiftCard } from "../classes/giftcard/GiftCard";
@@ -24,9 +24,9 @@ interface FormData {
 
 const GiftCardValidationForm: React.FC = () => {
   const [step, setStep] = useState<number>(1);
-  const [countries, setCountries] = useState<Country[]>([]);
   const [giftCard, setGiftCard] = useState<GiftCard>();
   const [isLoading, setIsLoading] = useState(false);
+  const buttonRef = useRef<HTMLButtonElement | null>(null);
 
   const [formData, setFormData] = useState<FormData>({
     giftCode: "",
@@ -151,21 +151,25 @@ const GiftCardValidationForm: React.FC = () => {
     return true;
   };
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const fetchedCountries = await Country.getAll();
-        setCountries(fetchedCountries);
-      } catch (error) {
-        Swal.fire({
-          icon: "error",
-          text: "error.loading-countries",
-        });
-      }
-    };
 
-    // fetchData();
-  }, []);
+  useEffect(() => {
+    const setParam = async ()=>{
+        const params = new URLSearchParams(window.location.search);
+        const giftCodeParam = params.get('giftCode');
+
+        if (giftCodeParam) {
+            await setFormData((prevData) => ({
+            ...prevData,
+            giftCode: giftCodeParam,
+            }));
+
+            if (buttonRef.current) {
+                buttonRef.current.click();
+            }
+        }
+    }
+    setParam();
+  }, []); 
 
   return (
     <div className="container">
@@ -190,7 +194,7 @@ const GiftCardValidationForm: React.FC = () => {
               <br />
               {/* {formData.giftCode && ( */}
               <div className="d-grid gap-2 col-2">
-                <button className="" onClick={()=> completeStep()} disabled={isLoading || !formData.giftCode}>
+                <button className="" onClick={()=> completeStep()} disabled={isLoading || !formData.giftCode} ref={buttonRef}>
                   {isLoading ? (
                     <>
                       <span
@@ -334,7 +338,6 @@ const GiftCardValidationForm: React.FC = () => {
                   placeholder={
                     i18next.t("recipient-greetings-placeholder") || ""
                   }
-                  required
                 />
 
                 <br />

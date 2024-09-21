@@ -191,8 +191,8 @@
   "title": "Gift Card Activation",
   "gift-code-placeholder": "Enter the code",
   "next": "Next",
-  "step-1-title": "1. Enter Gift Card Code",
-  "step-2-title": "2. Add your details",
+  "step-1-title": "1. About you",
+  "step-2-title": "2. Recipient Information",
   "step-3-title": "3. Thank You",
   "about-you": "About You",
   "customer-first-name-placeholder": "Name",
@@ -215,5 +215,6 @@
   "tickets.general-step.1.form.gift-card": "Giftcard code",
   "download-here": "Download here",
   "gift-message-success": "saved successfully",
-  "stripe-instant-confirmation": "Instant Confirmation - Secure and Encrypted check-out by Stripe"
+  "stripe-instant-confirmation": "Instant Confirmation - Secure and Encrypted check-out by Stripe",
+  "param-isnot-present": "Param code is not present in url"
 }

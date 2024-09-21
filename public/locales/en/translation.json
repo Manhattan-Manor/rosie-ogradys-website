@@ -216,5 +216,5 @@
   "download-here": "Download here",
   "gift-message-success": "saved successfully",
   "stripe-instant-confirmation": "Instant Confirmation - Secure and Encrypted check-out by Stripe",
-  "param-isnot-present": "Param code is not present in url"
+  "param-isnot-present": "Param giftCode is not present in url"
 }

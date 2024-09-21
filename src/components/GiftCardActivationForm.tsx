@@ -155,7 +155,7 @@ const GiftCardValidationForm: React.FC = () => {
 
         try {
           const giftCard = await GiftCard.getGiftCardByCode(giftCodeParam);
-          setGiftCardValid(true);
+          await setGiftCardValid(true);
           await setGiftCard(giftCard);
         } catch (error) {
           setGiftCardValid(false);
@@ -178,7 +178,7 @@ const GiftCardValidationForm: React.FC = () => {
           setIsLoading(false);
         }
       } else {
-        setErrorMessage(i18next.t("param-isnot-present") || "Param code is not present in url");
+        setErrorMessage(i18next.t("param-isnot-present") || "Param giftCode is not present in url");
         setGiftCardValid(false);
       }
       setIsLoading(false);

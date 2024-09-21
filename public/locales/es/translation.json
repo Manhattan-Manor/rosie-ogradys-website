@@ -208,5 +208,5 @@
   "download-here": "Descárgalo aquí",
   "gift-message-success": "Guardado con éxito",
   "stripe-instant-confirmation": "Confirmación Instantánea - Pago Asegurado y Encriptado por Stripe",
-  "param-isnot-present": "El párametro code no está presente en la url"
+  "param-isnot-present": "El párametro giftCode no está presente en la url"
 }

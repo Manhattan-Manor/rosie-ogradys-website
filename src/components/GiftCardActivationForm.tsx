@@ -189,6 +189,7 @@ const GiftCardValidationForm: React.FC = () => {
   return (
     <div className="container">
       <h2>{i18next.t("title") || ""}</h2>
+      {giftCardValid && <p className="subtitle">{i18next.t("subtitle") || ""}</p>}
       {!giftCardValid ? (
         errorMessage !== "" ? (
           <h2 className="giftCardError">{errorMessage}</h2>

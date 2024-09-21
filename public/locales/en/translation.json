@@ -215,7 +215,7 @@
   "error.loading-countries": "An error has occurred, please try again later",
   "tickets.general-step.1.form.gift-card": "Giftcard code",
   "download-here": "Download here",
-  "gift-message-success": "saved successfully",
+  "gift-message-success": "Your gift card was successfully sent. Thank you!",
   "stripe-instant-confirmation": "Instant Confirmation - Secure and Encrypted check-out by Stripe",
   "param-isnot-present": "Param giftCode is not present in url"
 }

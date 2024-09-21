@@ -207,7 +207,7 @@
   "error.loading-countries": "Ha ocurrido un error, intenta de nuevo mas tarde",
   "tickets.general-step.1.form.gift-card": "Código de la tarjeta de regalo",
   "download-here": "Descárgalo aquí",
-  "gift-message-success": "Guardado con éxito",
+  "gift-message-success": "Su tarjeta de regalo fue enviada correctamente. ¡Gracias!",
   "stripe-instant-confirmation": "Confirmación Instantánea - Pago Asegurado y Encriptado por Stripe",
   "param-isnot-present": "El párametro giftCode no está presente en la url"
 }

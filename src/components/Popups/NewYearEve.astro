@@ -1,0 +1,52 @@
+---
+import "../../assets/styles/Popup.scss";
+import { t } from "i18next";
+---
+
+<div
+  class="modal fade popup"
+  id="closingNoticeModal"
+  tabindex="-1"
+  aria-label="Closing Notice"
+  aria-hidden="true"
+  data-bs-theme="dark"
+>
+  <div class="modal-dialog modal-lx modal-dialog-centered">
+    <div class="modal-content text-center shadow-lg">
+      <div class="modal-body p-5 d-flex flex-column align-items-center justify-content-center">
+
+        <h2 class="mb-3 fw-bold">{t("popup-nye-title")}</h2>
+
+        <p class="mb-4">
+          {t("popup-nye-description")}
+        </p>
+
+        <a href="https://www.nye.manhattanmanor.com/" target="_blank" class="btn btn-primary btn-lg px-5">{t("popup-nye-discover-the-event")}</a>
+
+        <button
+          type="button"
+          class="btn-close position-absolute end-0 top-0 m-3"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // @ts-ignore
+  import bootstrap from "bootstrap/dist/js/bootstrap.bundle.min.js";
+
+  const modalElement = document.getElementById("closingNoticeModal");
+  const modalDelay = 500;
+
+  if (modalElement) {
+    const modal = new bootstrap.Modal(modalElement, {
+      keyboard: false,
+    });
+    setTimeout(() => {
+      modal.show();
+    }, modalDelay);
+  }
+</script>

@@ -209,5 +209,8 @@
   "download-here": "Descárgalo aquí",
   "gift-message-success": "Su tarjeta de regalo fue enviada correctamente. ¡Gracias!",
   "stripe-instant-confirmation": "Confirmación Instantánea - Pago Asegurado y Encriptado por Stripe",
-  "param-isnot-present": "El párametro giftCode no está presente en la url"
+  "param-isnot-present": "El párametro giftCode no está presente en la url",
+  "popup-nye-title": "🎉Celebre el año nuevo en el corazón de Times Square🎉",
+  "popup-nye-description": "Disfrute de una noche inolvidable con una cena gourmet, barra libre y una vista exclusiva de la caída de la bola en Times Square. ¡No se lo pierda!",
+  "popup-nye-discover-the-event": "★⋆ Ir al evento"
 }

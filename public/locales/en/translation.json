@@ -217,5 +217,8 @@
   "download-here": "Download here",
   "gift-message-success": "Your gift card was successfully sent. Thank you!",
   "stripe-instant-confirmation": "Instant Confirmation - Secure and Encrypted check-out by Stripe",
-  "param-isnot-present": "Param giftCode is not present in url"
+  "param-isnot-present": "Param giftCode is not present in url",
+  "popup-nye-title": "🎉Celebrate New Year's Eve in the Heart of Times Square🎉",
+  "popup-nye-description": "Enjoy an unforgettable night with a gourmet dinner, open bar, and an exclusive view of the Times Square Ball Drop. Don't miss out!",
+  "popup-nye-discover-the-event": "★⋆ Go the Event"
 }

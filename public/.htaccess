@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteCond %{REQUEST_URI} ^/ep$ [NC]
+RewriteRule ^(.*)$ https://tinyurl.com/order-Rosie [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/EP$ [NC]
+RewriteRule ^(.*)$ https://tinyurl.com/order-Rosie [R=301,L]

@@ -6,6 +6,7 @@ import cocktailImg from "../../assets/images/services/cocktails.png";
 import dessertImg from "../../assets/images/services/desserts.png";
 import LunchImg from "../../assets/images/services/lunch.jpg";
 import WinesImg from "../../assets/images/services/wines.jpg";
+import PlattersImg from "../../assets/images/services/platters.png";
 import { t } from "i18next";
 import Service from "../Service.astro";
 
@@ -58,6 +59,13 @@ const services = [
     image: dessertImg,
     linkToPDF: "desserts.pdf",
     linkToMenu: "/Menus/DessertMenu",
+  },
+  {
+    title: t("our-menus.platters"),
+    description: t("our-menus.platters.description"),
+    image: PlattersImg,
+    linkToPDF: "platters.pdf",
+    linkToMenu: "/Menus/PlattersMenu",
   },
 ];
 ---

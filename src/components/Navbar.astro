@@ -261,16 +261,16 @@ import { Image } from "@astrojs/image/components";
   }
 
   // Show sidenav
-  // const sidenav = document.querySelector(".sidenav") as HTMLElement;
-  // const sidenavContent = document.querySelector(
-  //   ".sidenav__content"
-  // ) as HTMLElement;
-  // if (sidenav && sidenavContent)
-  //   sidenav.addEventListener("click", () => {
-  //     if (sidenavContent.style.display === "block") {
-  //       sidenavContent.style.display = "none";
-  //     } else {
-  //       sidenavContent.style.display = "block";
-  //     }
-  //   });
+  const sidenav = document.querySelector(".sidenav") as HTMLElement;
+  const sidenavContent = document.querySelector(
+    ".sidenav__content"
+  ) as HTMLElement;
+  if (sidenav && sidenavContent)
+    sidenav.addEventListener("click", () => {
+      if (sidenavContent.style.display === "block") {
+        sidenavContent.style.display = "none";
+      } else {
+        sidenavContent.style.display = "block";
+      }
+    });
 </script>

@@ -38,7 +38,8 @@ const nextDecember31DateFormattedCapitalized =
     <a
       class="btn btn-primary mt-5 px-4 py-3 text-uppercase"
       target="_blank"
-      href="https://nye.rosieogradys.com">{t("common.buy-nye-tickets")}</a
+      href={`https://nye.manhattanmanor.com/${currentLanguage == 'es' ? "es": ""}`}
+    >{t("common.buy-nye-tickets")}</a
     >
   </section>
 </countdown-component>
@@ -94,7 +95,7 @@ const nextDecember31DateFormattedCapitalized =
       const happyNewYearString = this.dataset.happyNewYear;
 
       // Set the date we're counting down to
-      var countDownDate = new Date("Dec 31, 2024 00:00:00").getTime();
+      var countDownDate = new Date("Dec 31, 2025 00:00:00").getTime();
 
       // Update the count down every 1 second
       var x = setInterval(function () {

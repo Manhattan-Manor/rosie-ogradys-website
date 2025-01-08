@@ -26,24 +26,6 @@ import { Trans } from "astro-i18next/components";
     </p>
   </div>
 
-  <div id="instafeed-container" class="row"></div>
+  <script src="https://static.elfsight.com/platform/platform.js" async></script>
+  <div class="elfsight-app-1d18eda3-814d-4618-800e-58af5ed90af2" data-elfsight-app-lazy></div>
 </section>
-
-<script is:inline src="/client-libraries/instafeed.min.js"></script>
-<script>
-  // @ts-ignore
-  const userFeed = new Instafeed({
-    get: "user",
-    target: "instafeed-container",
-    resolution: "thumbnail",
-    accessToken: import.meta.env.PUBLIC_INSTAGRAM_ACCESS_TOKEN,
-    template: `
-      <div data-aos="fade-up" class="col-12 col-md-6 col-lg-4 col-xl-3">
-        <a class="d-flex justify-content-center" href="{{link}}" target="_blank" id="{{id}}">
-          <img class="p-2 img-fluid img-instafeed-entry" src="{{image}}" alt="Instagram post" title="{{caption}}" />
-        </a>
-      </div>`,
-    limit: 12,
-  });
-  userFeed.run();
-</script>

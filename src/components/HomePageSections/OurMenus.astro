@@ -8,15 +8,30 @@ import LunchImg from "../../assets/images/services/lunch.jpg";
 import WinesImg from "../../assets/images/services/wines.jpg";
 import PlattersImg from "../../assets/images/services/platters.png";
 import ValentineDay from "../../assets/images/services/valentine-day.png";
+import NYCRestaurantWeek from "../../assets/images/services/restaurant-week.png"
 import { t } from "i18next";
 import Service from "../Service.astro";
 
 const services = [
-{
+  {
     title: t("our-menus.valentine"),
     description: t("our-menus.valentine.description"),
     image: ValentineDay,
     linkToPDF: "Valentine2025.pdf",
+    linkToMenu: "/Menus/ValentineMenu",
+  },
+  {
+    title: t("our-menus.nyc-restaurant-week-lunch"),
+    description: t("our-menus.nyc-restaurant-week-lunch.description"),
+    image: NYCRestaurantWeek,
+    linkToPDF: "RestaurantWeewLunch.pdf",
+    linkToMenu: "/Menus/ValentineMenu",
+  },
+  {
+    title: t("our-menus.nyc-restaurant-week-dinner"),
+    description: t("our-menus.nyc-restaurant-week-dinner.description"),
+    image: NYCRestaurantWeek,
+    linkToPDF: "RestaurantWeewDinner.pdf",
     linkToMenu: "/Menus/ValentineMenu",
   },
   {

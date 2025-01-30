@@ -7,10 +7,18 @@ import dessertImg from "../../assets/images/services/desserts.png";
 import LunchImg from "../../assets/images/services/lunch.jpg";
 import WinesImg from "../../assets/images/services/wines.jpg";
 import PlattersImg from "../../assets/images/services/platters.png";
+import ValentineDay from "../../assets/images/services/valentine-day.png";
 import { t } from "i18next";
 import Service from "../Service.astro";
 
 const services = [
+{
+    title: t("our-menus.valentine"),
+    description: t("our-menus.valentine.description"),
+    image: ValentineDay,
+    linkToPDF: "Valentine2025.pdf",
+    linkToMenu: "/Menus/ValentineMenu",
+  },
   {
     title: t("our-menus.lunch"),
     description: t("our-menus.lunch.description"),

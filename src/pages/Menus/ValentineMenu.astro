@@ -1,0 +1,46 @@
+---
+import { Picture } from "@astrojs/image/components";
+import ValentineDay from "../../assets/images/menus/Prix Fixe Valentine 2025 single.png";
+---
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Valentine's Menu</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #fceaea;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      /* background-image: radial-gradient(circle, rgba(255, 255, 255, 0.4) 40%, transparent 50%); */
+      /* background-size: 80px 80px; */
+    }
+
+    .restaurant-menu-group {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .restaurant-menu-group img {
+      width: 26vw;
+      height: auto;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
+      border-radius: 18px;
+    }
+  </style>
+</head>
+<body>
+  <div class="restaurant-menu-group">
+    <Picture
+      src={ValentineDay}
+      alt={"Valentine's Day Menu"}
+      sizes="(max-width: 576px) 189px, (max-width: 992px) 250px, (max-width: 1920px) 450px, 70vw"
+      widths={[189, 250, 400, 450, 600]}
+      format="webp"
+    />
+  </div>
+</body>

@@ -5,6 +5,23 @@ const openTableLang = language === "es" ? "es-MX" : "en-US";
 ---
 
 <section id="reservations-section" class="container text-center">
+  <div class="d-flex justify-content-center mt-5 gap-4">
+    <a
+      class="btn btn-red px-4 py-3 text-uppercase"
+      target="_blank"
+      href="#menus-section"
+    >
+      {t("common.valentine-days-menu")}
+    </a>
+    <a
+      class="btn btn-black px-4 py-3 text-uppercase"
+      target="_blank"
+      href="#menus-section"
+    >
+      {t("common.advertising-week-menu")}
+    </a>
+  </div>
+
   <h1>{t("reservations")}</h1>
   <p>
     <strong>Rosie O' Grady's</strong><br />
@@ -41,3 +58,29 @@ const openTableLang = language === "es" ? "es-MX" : "en-US";
   src='//www.opentable.com/widget/reservation/loader?rid=13744&type=standard&theme=wide&color=1&dark=false&iframe=true&domain=com&lang=en-US&newtab=false&ot_source=Restaurant%20website&cfe=true'
   ></script>
 </section>
+
+<style lang="scss">
+  .btn-red {
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background-color: darken(#ff0000, 10%);
+      color: #777979;
+    }
+  }
+
+  .btn-black {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background-color: lighten(#000, 10%);
+      color: #b5bbbb;
+    }
+  }
+</style>

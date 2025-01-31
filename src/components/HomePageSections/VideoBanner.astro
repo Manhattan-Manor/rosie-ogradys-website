@@ -1,4 +1,5 @@
 ---
+import i18next, { t } from "i18next";
 import bannerVideo from "../../assets/videos/banner-video.mp4";
 import logo from "../../assets/images/logo.svg";
 import { Image } from "@astrojs/image/components";
@@ -31,6 +32,33 @@ import { Trans } from "astro-i18next/components";
   <a href="#who-we-are-section" class="bounce" aria-label="Scroll down">
     <i class="bi bi-chevron-down"></i>
   </a>
+
+  <div class="d-flex justify-content-center mt-2 gap-4">
+    <a
+      class="btn btn-red px-4 py-3 text-uppercase"
+      target="_blank"
+      href="/Menus/ValentineMenu"
+    >
+      {t("common.valentine-days-menu")}
+    </a>
+    <!-- <a
+      class="btn btn-black px-4 py-3 text-uppercase"
+      target="_blank"
+      href="#menus-section"
+    >
+      {t("common.advertising-week-menu")}
+      NYC Restaurant Week Lunch Menu
+    </a> -->
+    <!-- <a
+      class="btn btn-black px-4 py-3 text-uppercase"
+      target="_blank"
+      href="#menus-section"
+    >
+      {t("common.advertising-week-menu")}
+      NYC Restaurant Week Lunch Menu
+    </a> -->
+  </div>
+
 </div>
 
 <style lang="scss">
@@ -95,6 +123,30 @@ import { Trans } from "astro-i18next/components";
     }
     100% {
       transform: translateY(0);
+    }
+  }
+
+  .btn-red {
+    background-color: #ff0000d2;
+    color: #fff;
+    border: none;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background-color: darken(#ff0000, 10%);
+      color: #777979;
+    }
+  }
+
+  .btn-black {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background-color: lighten(#000, 10%);
+      color: #b5bbbb;
     }
   }
 </style>

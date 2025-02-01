@@ -3,7 +3,10 @@ import FashionWeekImg from "../../assets/images/upcoming-events/upcoming-events-
 import CelebrateImg from "../../assets/images/upcoming-events/upcoming-events-4.jpg";
 import AdvertisingWeekImg from "../../assets/images/upcoming-events/upcoming-events-1.jpg";
 import NYEImg from "../../assets/images/upcoming-events/upcoming-events-2.jpg";
-import NYCRestaurantMenu from "../../assets/images/upcoming-events/NYC-restaurant-menus.jpg"
+import NYCRestaurantWeek from "../../assets/images/upcoming-events/Restaurant-Week.png"
+import DogShow from "../../assets/images/upcoming-events/Dog-Show.png"
+import AcuteInflectionShow from "../../assets/images/upcoming-events/Acute-Inflections-Show.png"
+import LotrConcert from "../../assets/images/upcoming-events/LOTR-Concert.png"
 import Service from "../Service.astro";
 import { t } from "i18next";
 
@@ -51,8 +54,8 @@ const events = [
     <br /><br />
     During NYC Restaurant Week®, sample a variety of cuisines
     <br /><br />
-    For more information, click <a href="https://www.nyctourism.com/restaurant-week/">here</a>.`,
-    image: NYCRestaurantMenu,
+    For more information, click <a href="https://www.nyctourism.com/restaurant-week/" target="_Blank">here</a>.`,
+    image: NYCRestaurantWeek,
     textStyle: "top: 0;",
   },
   {
@@ -62,8 +65,29 @@ const events = [
     <h3>Westminster</h3>
     KENNEL CLUB DOG SHOW
     <br /><br />
-    Get tickets now<a href="https://www.nyctourism.com/restaurant-week/">here</a>.`,
-    image: NYCRestaurantMenu,
+    Get tickets now<a href="https://www.westminsterkennelclub.org/westminster-week/" target="_Blank">here</a>.`,
+    image: DogShow,
+    textStyle: "top: 0;",
+  },
+  {
+    title: "The Valentine's Day concert at Rosie's",
+    description: `Soulful Sounds in NYC (1st Set)
+    <br /><br />
+    Love & laughs
+    <br /><br />
+    For more information, click <a href="https://acuteinflections.com/product/02-14-2025/" target="_Blank">here</a>.`,
+    image: AcuteInflectionShow,
+    textStyle: "top: 0;",
+  },
+  {
+    title: "Concert at Radio City Music Hall",
+    description: `Concert
+    <br />
+    <h3>The Lord of the Rings in Concert</h3> <br/>
+    The Return of the King
+    <br /><br />
+    For more information, click <a href="https://www.msg.com/calendar/radio-city-music-hall-february-2025-the-lord-of-the-rings-in-concert" target="_Blank">here</a>.`,
+    image: LotrConcert,
     textStyle: "top: 0;",
   },
   

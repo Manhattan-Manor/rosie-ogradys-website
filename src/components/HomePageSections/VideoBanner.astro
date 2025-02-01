@@ -37,26 +37,24 @@ import { Trans } from "astro-i18next/components";
     <a
       class="btn btn-red px-4 py-3 text-uppercase"
       target="_blank"
-      href="/Menus/ValentineMenu"
+      href="/Valentine2025.pdf"
     >
       {t("common.valentine-days-menu")}
     </a>
-    <!-- <a
-      class="btn btn-black px-4 py-3 text-uppercase"
+    <a
+      class="btn btn-pink px-4 py-3 text-uppercase"
       target="_blank"
-      href="#menus-section"
+      href="RestaurantWeekLunch.pdf"
     >
-      {t("common.advertising-week-menu")}
-      NYC Restaurant Week Lunch Menu
-    </a> -->
-    <!-- <a
-      class="btn btn-black px-4 py-3 text-uppercase"
+      {t("common.nyc-restaurant-week-lunch-menu")}
+    </a> 
+    <a
+      class="btn btn-pink px-4 py-3 text-uppercase"
       target="_blank"
-      href="#menus-section"
+      href="RestaurantWeekDinner.pdf"
     >
-      {t("common.advertising-week-menu")}
-      NYC Restaurant Week Lunch Menu
-    </a> -->
+      {t("common.nyc-restaurant-week-dinner-menu")}
+    </a>
   </div>
 
 </div>
@@ -129,24 +127,43 @@ import { Trans } from "astro-i18next/components";
   .btn-red {
     background-color: #ff0000d2;
     color: #fff;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
     border: none;
     transition: all 0.3s ease-in-out;
-
+    padding: 0.7rem 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    
     &:hover {
-      background-color: darken(#ff0000, 10%);
-      color: #777979;
+      background-color: darken(#ff0000, 20%);
+      color: #ffd;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+      filter: brightness(1.2);
+
     }
   }
 
-  .btn-black {
-    background-color: #000;
+  .btn-pink {
+  background: url("../../assets/images/background-button-nyc-restaurant.png") no-repeat center center;
+  background-size: cover;
     color: #fff;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
     border: none;
     transition: all 0.3s ease-in-out;
-
+    padding: 0.7rem 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    
     &:hover {
-      background-color: lighten(#000, 10%);
-      color: #b5bbbb;
+      filter: brightness(1.2);
+      color: #fff;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
     }
-  }
+}
 </style>

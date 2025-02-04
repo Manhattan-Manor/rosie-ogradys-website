@@ -1,7 +1,7 @@
 import RestaurantMenu from "../classes/RestaurantMenu";
 
 const NYCRestaurantDinnerMenu: RestaurantMenu = {
-    name: "NYC Restauran Week® 2025",
+    name: "NYC Restaurant Week® 2025",
     categories: [
       {
         name: "Choice of Appetizer",

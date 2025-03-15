@@ -1,0 +1,87 @@
+---
+import InfoPages from "../layouts/InfoPages.astro";
+import logo from "../assets/images/rosie-mm-badge.png";
+---
+
+<InfoPages title="New Year's Eve Tickets">
+    <div id="content" class="hidden">
+        <div class="text-center">
+            <img
+            src={logo.src}
+            alt="Rosie MM Badge"
+            height="100"
+            width="100"
+            style={{ height: 100, width: 100 }}
+            />
+            <h1 class="text-center mb-5 mt-3" data-aos="fade-up">
+                New Year's Eve Tickets
+            </h1>
+        </div>
+        <h1 class="text-center mb-5" data-aos="fade-up">
+            THANK YOU VERY MUCH
+        </h1>
+        <div class="d-flex justify-content-center">
+          <button
+            type="button"
+            id="horizontal-prev-step"
+            class="btn btn-primary mb-5 mx-auto"
+            data-transaction-id=""
+          >
+            Download your tickets
+          </button>
+        </div>
+        <div class="horizontal-stepper-container">
+            <p>Looking forward to celebrating together. Please consider the following information:</p>
+            <p class='mt-3'>According to New York City regulations, all persons must show ID and event ticket to pass New York Police Department (NYPD) Times Square Security. Please print a copy of each ticket and bring it with you on the evening of the event to ensure entry into the Times Square Neighborhood and the venue.</p>
+            <p class='mt-3'>Order number: <span id="transaction-id">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</span></p>
+            <p class='mt-2' style={{ marginBottom: 0 }}>Questions?</p>
+            <p>Please contact us.</p>
+            <p class='mt-2' style={{ marginBottom: 0 }}>Amanda Smith</p>
+            <p style={{ marginBottom: 0 }}>amanda@manhattanmanor.com</p>
+            <p>1-646-627-4329</p>
+        </div>
+      </div>
+</InfoPages>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const params = new URLSearchParams(window.location.search);
+    const transactionId = params.get("transactionId");
+
+    if (!transactionId) {
+      alert("Required information is missing. You will be redirected to the homepage.");
+      window.location.href = "/";
+      return;
+    }
+
+    const content = document.getElementById("content");
+    if (content) {
+      content.style.display = "block";
+    }
+
+    const transactionElement = document.getElementById("transaction-id");
+    if (transactionElement) {
+      transactionElement.textContent = transactionId;
+    }
+
+    const downloadButton = document.getElementById("horizontal-prev-step");
+    if (downloadButton) {
+      downloadButton.addEventListener("click", () => {
+        const apiUrl = import.meta.env.PUBLIC_API + `transaction.php?transactionId=${transactionId}`;
+        window.open(apiUrl, "_blank");
+      });
+    }
+  });
+</script>
+
+<style>
+  .hidden {
+    display: none;
+  }
+
+  .horizontal-stepper-container {
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+  }
+</style>

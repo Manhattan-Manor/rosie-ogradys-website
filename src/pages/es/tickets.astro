@@ -1,0 +1,11 @@
+---
+import StepperMain from "../../components/BuyTicketsForm/StepperForm";
+import InfoPages from "../../layouts/InfoPages.astro";
+import { changeLanguage } from "i18next";
+changeLanguage("es");
+
+---
+
+<InfoPages title="Tickets">
+    <StepperMain client:only/>
+</InfoPages>

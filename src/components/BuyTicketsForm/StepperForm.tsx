@@ -595,11 +595,11 @@ const StepperForm = () => {
                 {i18next.t("tickets.print-tickets.line3")}
               </p>
               <p>{i18next.t("tickets.print-tickets.line4")}</p>
-              <p className="mt-2" style={{ marginBottom: 0 }}>
+              {/* <p className="mt-2" style={{ marginBottom: 0 }}>
                 Amanda Smith
-              </p>
-              <p style={{ marginBottom: 0 }}>amanda@manhattanmanor.com</p>
-              <p>1-646-627-4329</p>
+              </p> */}
+              <p className="mt-2" style={{ marginBottom: 0 }}>events@rosieoradys.com</p>
+              {/* <p>1-646-627-4329</p> */}
             </div>
           )}
           <StepperButtons
